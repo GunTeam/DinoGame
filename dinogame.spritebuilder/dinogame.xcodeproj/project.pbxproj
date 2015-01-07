@@ -93,6 +93,9 @@
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
 		BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4A72521A5D9DFC00B649CB /* GameScene.m */; };
+		BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4CD1A5DB92C007C0E54 /* Nest.m */; };
+		BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */; };
+		BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */; };
 		BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE72DD31A5D99A400888317 /* dinosaur.m */; };
 /* End PBXBuildFile section */
 
@@ -232,6 +235,12 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		BA4A72511A5D9DFC00B649CB /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA4A72521A5D9DFC00B649CB /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BA6DC4CC1A5DB92C007C0E54 /* Nest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nest.h; sourceTree = "<group>"; };
+		BA6DC4CD1A5DB92C007C0E54 /* Nest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nest.m; sourceTree = "<group>"; };
+		BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurNest.h; sourceTree = "<group>"; };
+		BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurNest.m; sourceTree = "<group>"; };
+		BA6DC4D21A5DBA99007C0E54 /* EnemyNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyNest.h; sourceTree = "<group>"; };
+		BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyNest.m; sourceTree = "<group>"; };
 		BAE72DD21A5D99A400888317 /* dinosaur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dinosaur.h; sourceTree = "<group>"; };
 		BAE72DD31A5D99A400888317 /* dinosaur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dinosaur.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
@@ -578,6 +587,12 @@
 			children = (
 				BAE72DD21A5D99A400888317 /* dinosaur.h */,
 				BAE72DD31A5D99A400888317 /* dinosaur.m */,
+				BA6DC4CC1A5DB92C007C0E54 /* Nest.h */,
+				BA6DC4CD1A5DB92C007C0E54 /* Nest.m */,
+				BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */,
+				BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */,
+				BA6DC4D21A5DBA99007C0E54 /* EnemyNest.h */,
+				BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -891,7 +906,10 @@
 				B73789871807631A0076A88C /* main.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */,
+				BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */,
+				BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */,
 				BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */,
+				BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

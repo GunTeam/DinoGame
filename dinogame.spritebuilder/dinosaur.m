@@ -18,7 +18,7 @@
 
 -(void) moveDinoForward{
     self.position = ccp( self.position.x + 100*self.speed, self.position.y );
-    CCLOG(@"%i", self.position.x);
+//    CCLOG(@"%i", self.position.x);
 }
 
 -(void) moveDinoBackward{
