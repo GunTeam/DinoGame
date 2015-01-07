@@ -12,6 +12,8 @@
 
 @interface GameScene : CCNode {
     CGFloat screenWidth,screenHeight;
+    CCPhysicsNode *physicsNode;
+    NSMutableArray *ourDinos, *enemyDinos;
 }
 
 @end

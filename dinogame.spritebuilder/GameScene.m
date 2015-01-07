@@ -8,6 +8,7 @@
 
 #import "GameScene.h"
 
+dinosaur *dino;
 
 @implementation GameScene
 
@@ -19,11 +20,36 @@
     screenWidth = screenSize.width/2;
     screenHeight = screenSize.height/2;
   
-    dinosaur *dino = (dinosaur *) [CCBReader load:@"dinosaur"];
+    dino = (dinosaur *) [CCBReader load:@"dinosaur"];
     dino.position = CGPointMake(screenWidth/2, screenHeight/2);
     
-    [self addChild: dino];
-
+    ourDinos = [[NSMutableArray alloc]init];
+    enemyDinos = [[NSMutableArray alloc]init];
 }
 
+-(void)spawnEnemyDino{
+    dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
+    newDino.position = CGPointMake(screenWidth/2, screenHeight/2);
+    [enemyDinos addObject:newDino];
+}
+
+-(void)spawnOurDino{
+    dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
+    newDino.position = CGPointMake(screenWidth/2, screenHeight/2);
+    [ourDinos addObject:newDino];
+    [self addChild: newDino];
+}
+
+- (void)update:(CCTime)delta
+{
+    //move our dinosaurs forward
+    for(dinosaur *thisDino in ourDinos){
+        [thisDino moveDinoForward];
+    }
+    
+    //move the enemy dinosaurs backward
+    for(dinosaur *thisDino in enemyDinos){
+        [thisDino moveDinoBackward];
+    }
+}
 @end

@@ -12,8 +12,12 @@
 @interface dinosaur : CCSprite {
 }
 
+-(void) moveDinoForward;
+-(void) moveDinoBackward;
+
+
 @property int health;
-@property int speed;
+@property double speed;
 @property int attack;
 @property Boolean inAir;
 
