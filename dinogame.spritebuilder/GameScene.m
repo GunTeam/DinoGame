@@ -20,7 +20,7 @@ dinosaur *dino;
     screenWidth = screenSize.width/2;
     screenHeight = screenSize.height/2;
     
-    strandsOfYarn = 0;
+    strandsOfYarn = 0; //start out currency at 0
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
     numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"Marker Felt" fontSize:24];
@@ -55,17 +55,39 @@ dinosaur *dino;
 {
     //move our dinosaurs forward
     for(dinosaur *thisDino in ourDinos){
-        [thisDino moveDinoForward];
+        if([enemyDinos count] != 0){
+            dinosaur *firstEnemy = [enemyDinos objectAtIndex:0];
+            if( [thisDino collidesWith:firstEnemy]){ // an attack occurs
+                
+            }
+            else{
+                [thisDino moveDinoForward];
+            }
+        }
+        else{
+            [thisDino moveDinoForward];
+        }
     }
     
     //move the enemy dinosaurs backward
     for(dinosaur *thisDino in enemyDinos){
-        [thisDino moveDinoBackward];
+        if([ourDinos count] != 0){
+            dinosaur *ourFirstDino = [ourDinos objectAtIndex:0];
+            if( [thisDino collidesWith:ourFirstDino]){ // an attack occurs
+                
+            }
+            else{
+                [thisDino moveDinoBackward];
+            }
+        }
+        else{
+            [thisDino moveDinoBackward];
+        }
+
     }
     
     strandsOfYarn = strandsOfYarn + 1;
     [numYarnsLabel setString:[NSString stringWithFormat:@"Num Yarns: %i", strandsOfYarn]];
-    
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){

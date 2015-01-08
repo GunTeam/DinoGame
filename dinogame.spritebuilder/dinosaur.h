@@ -10,11 +10,12 @@
 #import "cocos2d.h"
 
 @interface dinosaur : CCSprite {
+    int ATTACK_THRESHOLD;
 }
 
 -(void) moveDinoForward;
 -(void) moveDinoBackward;
-
+-(Boolean) collidesWith:(dinosaur *)enemyDino;
 
 @property int health;
 @property double speed;

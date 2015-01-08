@@ -14,6 +14,7 @@
 
 -(void) didLoadFromCCB{
     self.speed = 0.01; //default
+    ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
 }
 
 -(void) moveDinoForward{
@@ -23,6 +24,13 @@
 
 -(void) moveDinoBackward{
     self.position = ccp( self.position.x - 100*self.speed, self.position.y );
+}
+
+-(Boolean) collidesWith:(dinosaur *)enemyDino{
+    if( abs(enemyDino.position.x - self.position.x) <=10){
+        return true;
+    }
+    return false;
 }
 
 @end
