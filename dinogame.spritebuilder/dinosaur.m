@@ -33,4 +33,8 @@
     return false;
 }
 
+-(void) attackDino:(dinosaur *)enemyDino{
+    enemyDino.health -= self.attack;
+}
+
 @end

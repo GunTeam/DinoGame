@@ -16,6 +16,7 @@
 -(void) moveDinoForward;
 -(void) moveDinoBackward;
 -(Boolean) collidesWith:(dinosaur *)enemyDino;
+-(void) attackDino:(dinosaur *)enemyDino;
 
 @property int health;
 @property double speed;

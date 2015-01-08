@@ -58,7 +58,7 @@ dinosaur *dino;
         if([enemyDinos count] != 0){
             dinosaur *firstEnemy = [enemyDinos objectAtIndex:0];
             if( [thisDino collidesWith:firstEnemy]){ // an attack occurs
-                
+                [thisDino attackDino:firstEnemy];
             }
             else{
                 [thisDino moveDinoForward];
@@ -70,18 +70,18 @@ dinosaur *dino;
     }
     
     //move the enemy dinosaurs backward
-    for(dinosaur *thisDino in enemyDinos){
+    for(dinosaur *thisEnemy in enemyDinos){
         if([ourDinos count] != 0){
             dinosaur *ourFirstDino = [ourDinos objectAtIndex:0];
-            if( [thisDino collidesWith:ourFirstDino]){ // an attack occurs
-                
+            if( [thisEnemy collidesWith:ourFirstDino]){ // an attack occurs
+                [thisEnemy attackDino:ourFirstDino];
             }
             else{
-                [thisDino moveDinoBackward];
+                [thisEnemy moveDinoBackward];
             }
         }
         else{
-            [thisDino moveDinoBackward];
+            [thisEnemy moveDinoBackward];
         }
 
     }
