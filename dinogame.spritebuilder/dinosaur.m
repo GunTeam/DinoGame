@@ -37,4 +37,13 @@
     enemyDino.health -= self.attack;
 }
 
+-(Boolean) attackedByDino:(dinosaur *)enemyDino{
+    self.health -= enemyDino.attack;
+    if(self.health <= 0){
+        [self removeFromParent];
+        return true;
+    }
+    return false;
+}
+
 @end
