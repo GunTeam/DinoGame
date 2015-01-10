@@ -80,7 +80,7 @@ dinosaur *dino;
             dinosaur *ourFirstDino = [ourDinos objectAtIndex:0];
             if( [thisEnemy collidesWith:ourFirstDino]){ // an attack occurs
                 Boolean killed = [ourFirstDino attackedByDino:thisEnemy];
-                g
+                
             }
             else{
                 [thisEnemy moveDinoBackward];
