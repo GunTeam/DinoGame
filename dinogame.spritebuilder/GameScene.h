@@ -24,5 +24,6 @@
 }
 
 @property int chanceOfEnemySpawn;
+@property int killBonus; //how many yarns you get upon killing an enemy
 
 @end

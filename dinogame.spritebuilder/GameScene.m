@@ -26,7 +26,9 @@ dinosaur *dino;
     numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"Marker Felt" fontSize:24];
     numYarnsLabel.position = ccp((5./6)*screenWidth, (6./7)*screenHeight);
     [self addChild:numYarnsLabel z:1];
+    
     self.chanceOfEnemySpawn = 5; //percentage of timesteps an enemy is spawned
+    self.killBonus = 10;
     
     ourNest = (OurNest *) [CCBReader load:@"OurNest"];
     enemyNest = (EnemyNest *) [CCBReader load:@"EnemyNest"];
@@ -58,7 +60,10 @@ dinosaur *dino;
         if([enemyDinos count] != 0){
             dinosaur *firstEnemy = [enemyDinos objectAtIndex:0];
             if( [thisDino collidesWith:firstEnemy]){ // an attack occurs
-                [thisDino attackDino:firstEnemy];
+                Boolean enemyKilled = [firstEnemy attackedByDino:thisDino];
+                if(enemyKilled){
+                    strandsOfYarn += self.killBonus;
+                }
             }
             else{
                 [thisDino moveDinoForward];
@@ -74,7 +79,8 @@ dinosaur *dino;
         if([ourDinos count] != 0){
             dinosaur *ourFirstDino = [ourDinos objectAtIndex:0];
             if( [thisEnemy collidesWith:ourFirstDino]){ // an attack occurs
-                [thisEnemy attackDino:ourFirstDino];
+                Boolean killed = [ourFirstDino attackedByDino:thisEnemy];
+                g
             }
             else{
                 [thisEnemy moveDinoBackward];
