@@ -10,7 +10,9 @@
 
 dinosaur *dino;
 
-@implementation GameScene
+@implementation GameScene{
+CCPhysicsNode *_physicsNode;
+}
 
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = true;
@@ -44,6 +46,23 @@ dinosaur *dino;
     
     [self addChild:ourNest];
     [self addChild:enemyNest];
+    
+    // listen for swipes to the left
+    UISwipeGestureRecognizer * swipeLeft= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeLeft)];
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeLeft];
+    // listen for swipes to the right
+    UISwipeGestureRecognizer * swipeRight= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeRight)];
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRight];
+    // listen for swipes up
+    UISwipeGestureRecognizer * swipeUp= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeUp)];
+    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeUp];
+    // listen for swipes down
+    UISwipeGestureRecognizer * swipeDown= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeDown)];
+    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
+    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
 }
 
 -(void)spawnEnemyDino{
@@ -109,16 +128,22 @@ dinosaur *dino;
     }
 }
 
--(void)handleSwipeGesture:(UISwipeGestureRecognizer *) sender
-{
-    //Gesture detect - swipe up/down , can be recognized direction
-    if(sender.direction == UISwipeGestureRecognizerDirectionUp)
-    {
-        CCLOG(@"HELLO");
-    }
-    else if(sender.direction == UISwipeGestureRecognizerDirectionDown)
-    {
-    }
+- (void)swipeLeft {
+    CCLOG(@"swipeLeft");
+}
+- (void)swipeRight {
+    CCLOG(@"swipeRight");
+}
+- (void)swipeDown {
+    CCLOG(@"swipeDown");
+}
+- (void)swipeUp {
+    CCLOG(@"swipeUp");
+}
+
+
+// called on every touch in this scene
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
 }
 
 @end
