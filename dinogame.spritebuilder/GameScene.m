@@ -13,6 +13,9 @@ dinosaur *dino;
 @implementation GameScene{
 CCPhysicsNode *_physicsNode;
 }
+@synthesize glyphDetector;
+
+
 
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = true;
@@ -50,20 +53,27 @@ CCPhysicsNode *_physicsNode;
     // listen for swipes to the left
     UISwipeGestureRecognizer * swipeLeft= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeLeft)];
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeLeft];
+//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeLeft];
     // listen for swipes to the right
     UISwipeGestureRecognizer * swipeRight= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeRight)];
     swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRight];
+//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRight];
     // listen for swipes up
     UISwipeGestureRecognizer * swipeUp= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeUp)];
     swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
-    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeUp];
+//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeUp];
     // listen for swipes down
     UISwipeGestureRecognizer * swipeDown= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeDown)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
+//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
+    
+    self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame:[[CCDirector sharedDirector] view].bounds];
+    self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.gestureDetectorView.delegate = self;
+    [self.gestureDetectorView loadTemplatesWithNames: @"circle", @"square", nil];
+    [[[CCDirector sharedDirector] view] addSubview:self.gestureDetectorView];
 }
+
 
 -(void)spawnEnemyDino{
     dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
@@ -145,5 +155,6 @@ CCPhysicsNode *_physicsNode;
 // called on every touch in this scene
 - (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
 }
+
 
 @end

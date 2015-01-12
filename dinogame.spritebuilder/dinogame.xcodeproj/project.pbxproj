@@ -93,6 +93,26 @@
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
 		BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4A72521A5D9DFC00B649CB /* GameScene.m */; };
+		BA4CDBB71A6465D200D35A8C /* WTMDetectionResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBA81A6465D200D35A8C /* WTMDetectionResult.m */; };
+		BA4CDBB81A6465D200D35A8C /* WTMGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBAB1A6465D200D35A8C /* WTMGlyph.m */; };
+		BA4CDBB91A6465D200D35A8C /* WTMGlyphDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBAD1A6465D200D35A8C /* WTMGlyphDefaults.m */; };
+		BA4CDBBA1A6465D200D35A8C /* WTMGlyphDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBB01A6465D200D35A8C /* WTMGlyphDetector.m */; };
+		BA4CDBBB1A6465D200D35A8C /* WTMGlyphStroke.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBB21A6465D200D35A8C /* WTMGlyphStroke.m */; };
+		BA4CDBBC1A6465D200D35A8C /* WTMGlyphTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBB41A6465D200D35A8C /* WTMGlyphTemplate.m */; };
+		BA4CDBBD1A6465D200D35A8C /* WTMGlyphUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBB61A6465D200D35A8C /* WTMGlyphUtilities.m */; };
+		BA4CDBD71A6465E000D35A8C /* CDataScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBC01A6465E000D35A8C /* CDataScanner.m */; };
+		BA4CDBD81A6465E000D35A8C /* CFilteringJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBC31A6465E000D35A8C /* CFilteringJSONSerializer.m */; };
+		BA4CDBD91A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBC51A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m */; };
+		BA4CDBDA1A6465E000D35A8C /* CJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBC71A6465E000D35A8C /* CJSONSerialization.m */; };
+		BA4CDBDB1A6465E000D35A8C /* CJSONSerializedData.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBC91A6465E000D35A8C /* CJSONSerializedData.m */; };
+		BA4CDBDC1A6465E000D35A8C /* CDataScanner_Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBCC1A6465E000D35A8C /* CDataScanner_Extensions.m */; };
+		BA4CDBDD1A6465E000D35A8C /* NSDictionary_JSONExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBCE1A6465E000D35A8C /* NSDictionary_JSONExtensions.m */; };
+		BA4CDBDE1A6465E000D35A8C /* CJSONDeserializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBD11A6465E000D35A8C /* CJSONDeserializer.m */; };
+		BA4CDBDF1A6465E000D35A8C /* CJSONScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBD31A6465E000D35A8C /* CJSONScanner.m */; };
+		BA4CDBE01A6465E000D35A8C /* CJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBD51A6465E000D35A8C /* CJSONSerializer.m */; };
+		BA4CDBE41A646A1200D35A8C /* WTMGlyphDetectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBE31A646A1200D35A8C /* WTMGlyphDetectorView.m */; };
+		BA4CDBE71A646BDC00D35A8C /* circle.json in Resources */ = {isa = PBXBuildFile; fileRef = BA4CDBE51A646BDC00D35A8C /* circle.json */; };
+		BA4CDBE81A646BDC00D35A8C /* square.json in Resources */ = {isa = PBXBuildFile; fileRef = BA4CDBE61A646BDC00D35A8C /* square.json */; };
 		BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4CD1A5DB92C007C0E54 /* Nest.m */; };
 		BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */; };
 		BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */; };
@@ -235,6 +255,47 @@
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
 		BA4A72511A5D9DFC00B649CB /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA4A72521A5D9DFC00B649CB /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		BA4CDBA71A6465D200D35A8C /* WTMDetectionResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMDetectionResult.h; path = Source/WTMGlyph/WTMDetectionResult.h; sourceTree = "<group>"; };
+		BA4CDBA81A6465D200D35A8C /* WTMDetectionResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMDetectionResult.m; path = Source/WTMGlyph/WTMDetectionResult.m; sourceTree = "<group>"; };
+		BA4CDBA91A6465D200D35A8C /* WTMGlyph-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "WTMGlyph-Prefix.pch"; path = "Source/WTMGlyph/WTMGlyph-Prefix.pch"; sourceTree = "<group>"; };
+		BA4CDBAA1A6465D200D35A8C /* WTMGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyph.h; path = Source/WTMGlyph/WTMGlyph.h; sourceTree = "<group>"; };
+		BA4CDBAB1A6465D200D35A8C /* WTMGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyph.m; path = Source/WTMGlyph/WTMGlyph.m; sourceTree = "<group>"; };
+		BA4CDBAC1A6465D200D35A8C /* WTMGlyphDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphDefaults.h; path = Source/WTMGlyph/WTMGlyphDefaults.h; sourceTree = "<group>"; };
+		BA4CDBAD1A6465D200D35A8C /* WTMGlyphDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphDefaults.m; path = Source/WTMGlyph/WTMGlyphDefaults.m; sourceTree = "<group>"; };
+		BA4CDBAE1A6465D200D35A8C /* WTMGlyphDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphDelegate.h; path = Source/WTMGlyph/WTMGlyphDelegate.h; sourceTree = "<group>"; };
+		BA4CDBAF1A6465D200D35A8C /* WTMGlyphDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphDetector.h; path = Source/WTMGlyph/WTMGlyphDetector.h; sourceTree = "<group>"; };
+		BA4CDBB01A6465D200D35A8C /* WTMGlyphDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphDetector.m; path = Source/WTMGlyph/WTMGlyphDetector.m; sourceTree = "<group>"; };
+		BA4CDBB11A6465D200D35A8C /* WTMGlyphStroke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphStroke.h; path = Source/WTMGlyph/WTMGlyphStroke.h; sourceTree = "<group>"; };
+		BA4CDBB21A6465D200D35A8C /* WTMGlyphStroke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphStroke.m; path = Source/WTMGlyph/WTMGlyphStroke.m; sourceTree = "<group>"; };
+		BA4CDBB31A6465D200D35A8C /* WTMGlyphTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphTemplate.h; path = Source/WTMGlyph/WTMGlyphTemplate.h; sourceTree = "<group>"; };
+		BA4CDBB41A6465D200D35A8C /* WTMGlyphTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphTemplate.m; path = Source/WTMGlyph/WTMGlyphTemplate.m; sourceTree = "<group>"; };
+		BA4CDBB51A6465D200D35A8C /* WTMGlyphUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphUtilities.h; path = Source/WTMGlyph/WTMGlyphUtilities.h; sourceTree = "<group>"; };
+		BA4CDBB61A6465D200D35A8C /* WTMGlyphUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphUtilities.m; path = Source/WTMGlyph/WTMGlyphUtilities.m; sourceTree = "<group>"; };
+		BA4CDBBF1A6465E000D35A8C /* CDataScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDataScanner.h; path = Source/WTMGlyph/CDataScanner.h; sourceTree = "<group>"; };
+		BA4CDBC01A6465E000D35A8C /* CDataScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDataScanner.m; path = Source/WTMGlyph/CDataScanner.m; sourceTree = "<group>"; };
+		BA4CDBC21A6465E000D35A8C /* CFilteringJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CFilteringJSONSerializer.h; sourceTree = "<group>"; };
+		BA4CDBC31A6465E000D35A8C /* CFilteringJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CFilteringJSONSerializer.m; sourceTree = "<group>"; };
+		BA4CDBC41A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer_BlocksExtensions.h; sourceTree = "<group>"; };
+		BA4CDBC51A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer_BlocksExtensions.m; sourceTree = "<group>"; };
+		BA4CDBC61A6465E000D35A8C /* CJSONSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerialization.h; sourceTree = "<group>"; };
+		BA4CDBC71A6465E000D35A8C /* CJSONSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerialization.m; sourceTree = "<group>"; };
+		BA4CDBC81A6465E000D35A8C /* CJSONSerializedData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializedData.h; sourceTree = "<group>"; };
+		BA4CDBC91A6465E000D35A8C /* CJSONSerializedData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializedData.m; sourceTree = "<group>"; };
+		BA4CDBCB1A6465E000D35A8C /* CDataScanner_Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDataScanner_Extensions.h; sourceTree = "<group>"; };
+		BA4CDBCC1A6465E000D35A8C /* CDataScanner_Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDataScanner_Extensions.m; sourceTree = "<group>"; };
+		BA4CDBCD1A6465E000D35A8C /* NSDictionary_JSONExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionary_JSONExtensions.h; sourceTree = "<group>"; };
+		BA4CDBCE1A6465E000D35A8C /* NSDictionary_JSONExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_JSONExtensions.m; sourceTree = "<group>"; };
+		BA4CDBD01A6465E000D35A8C /* CJSONDeserializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONDeserializer.h; sourceTree = "<group>"; };
+		BA4CDBD11A6465E000D35A8C /* CJSONDeserializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONDeserializer.m; sourceTree = "<group>"; };
+		BA4CDBD21A6465E000D35A8C /* CJSONScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONScanner.h; sourceTree = "<group>"; };
+		BA4CDBD31A6465E000D35A8C /* CJSONScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONScanner.m; sourceTree = "<group>"; };
+		BA4CDBD41A6465E000D35A8C /* CJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJSONSerializer.h; sourceTree = "<group>"; };
+		BA4CDBD51A6465E000D35A8C /* CJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJSONSerializer.m; sourceTree = "<group>"; };
+		BA4CDBD61A6465E000D35A8C /* JSONRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONRepresentation.h; sourceTree = "<group>"; };
+		BA4CDBE21A646A1200D35A8C /* WTMGlyphDetectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WTMGlyphDetectorView.h; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/WTMGlyphDetectorView.h"; sourceTree = "<group>"; };
+		BA4CDBE31A646A1200D35A8C /* WTMGlyphDetectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphDetectorView.m; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/WTMGlyphDetectorView.m"; sourceTree = "<group>"; };
+		BA4CDBE51A646BDC00D35A8C /* circle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circle.json; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/gestures/circle.json"; sourceTree = "<group>"; };
+		BA4CDBE61A646BDC00D35A8C /* square.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = square.json; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/gestures/square.json"; sourceTree = "<group>"; };
 		BA6DC4CC1A5DB92C007C0E54 /* Nest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nest.h; sourceTree = "<group>"; };
 		BA6DC4CD1A5DB92C007C0E54 /* Nest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nest.m; sourceTree = "<group>"; };
 		BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurNest.h; sourceTree = "<group>"; };
@@ -472,6 +533,7 @@
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				BA4CDBE11A64660000D35A8C /* GlyphDetector */,
 				BAE72DD11A5D998900888317 /* Sprites */,
 				BAE72DCF1A5D997600888317 /* Scenes */,
 				7A40362019DDEF0D007B6E8F /* Platforms */,
@@ -571,11 +633,86 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA4CDBC11A6465E000D35A8C /* Experimental */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CDBC21A6465E000D35A8C /* CFilteringJSONSerializer.h */,
+				BA4CDBC31A6465E000D35A8C /* CFilteringJSONSerializer.m */,
+				BA4CDBC41A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.h */,
+				BA4CDBC51A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m */,
+				BA4CDBC61A6465E000D35A8C /* CJSONSerialization.h */,
+				BA4CDBC71A6465E000D35A8C /* CJSONSerialization.m */,
+				BA4CDBC81A6465E000D35A8C /* CJSONSerializedData.h */,
+				BA4CDBC91A6465E000D35A8C /* CJSONSerializedData.m */,
+			);
+			name = Experimental;
+			path = Source/WTMGlyph/Experimental;
+			sourceTree = "<group>";
+		};
+		BA4CDBCA1A6465E000D35A8C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CDBCB1A6465E000D35A8C /* CDataScanner_Extensions.h */,
+				BA4CDBCC1A6465E000D35A8C /* CDataScanner_Extensions.m */,
+				BA4CDBCD1A6465E000D35A8C /* NSDictionary_JSONExtensions.h */,
+				BA4CDBCE1A6465E000D35A8C /* NSDictionary_JSONExtensions.m */,
+			);
+			name = Extensions;
+			path = Source/WTMGlyph/Extensions;
+			sourceTree = "<group>";
+		};
+		BA4CDBCF1A6465E000D35A8C /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CDBD01A6465E000D35A8C /* CJSONDeserializer.h */,
+				BA4CDBD11A6465E000D35A8C /* CJSONDeserializer.m */,
+				BA4CDBD21A6465E000D35A8C /* CJSONScanner.h */,
+				BA4CDBD31A6465E000D35A8C /* CJSONScanner.m */,
+				BA4CDBD41A6465E000D35A8C /* CJSONSerializer.h */,
+				BA4CDBD51A6465E000D35A8C /* CJSONSerializer.m */,
+				BA4CDBD61A6465E000D35A8C /* JSONRepresentation.h */,
+			);
+			name = JSON;
+			path = Source/WTMGlyph/JSON;
+			sourceTree = "<group>";
+		};
+		BA4CDBE11A64660000D35A8C /* GlyphDetector */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CDBBF1A6465E000D35A8C /* CDataScanner.h */,
+				BA4CDBC01A6465E000D35A8C /* CDataScanner.m */,
+				BA4CDBC11A6465E000D35A8C /* Experimental */,
+				BA4CDBCA1A6465E000D35A8C /* Extensions */,
+				BA4CDBCF1A6465E000D35A8C /* JSON */,
+				BA4CDBA71A6465D200D35A8C /* WTMDetectionResult.h */,
+				BA4CDBA81A6465D200D35A8C /* WTMDetectionResult.m */,
+				BA4CDBA91A6465D200D35A8C /* WTMGlyph-Prefix.pch */,
+				BA4CDBAA1A6465D200D35A8C /* WTMGlyph.h */,
+				BA4CDBAB1A6465D200D35A8C /* WTMGlyph.m */,
+				BA4CDBAC1A6465D200D35A8C /* WTMGlyphDefaults.h */,
+				BA4CDBAD1A6465D200D35A8C /* WTMGlyphDefaults.m */,
+				BA4CDBAE1A6465D200D35A8C /* WTMGlyphDelegate.h */,
+				BA4CDBAF1A6465D200D35A8C /* WTMGlyphDetector.h */,
+				BA4CDBB01A6465D200D35A8C /* WTMGlyphDetector.m */,
+				BA4CDBB11A6465D200D35A8C /* WTMGlyphStroke.h */,
+				BA4CDBB21A6465D200D35A8C /* WTMGlyphStroke.m */,
+				BA4CDBB31A6465D200D35A8C /* WTMGlyphTemplate.h */,
+				BA4CDBB41A6465D200D35A8C /* WTMGlyphTemplate.m */,
+				BA4CDBB51A6465D200D35A8C /* WTMGlyphUtilities.h */,
+				BA4CDBB61A6465D200D35A8C /* WTMGlyphUtilities.m */,
+			);
+			name = GlyphDetector;
+			sourceTree = "<group>";
+		};
 		BAE72DCF1A5D997600888317 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				BA4CDBE51A646BDC00D35A8C /* circle.json */,
+				BA4CDBE61A646BDC00D35A8C /* square.json */,
 				BA4A72511A5D9DFC00B649CB /* GameScene.h */,
 				BA4A72521A5D9DFC00B649CB /* GameScene.m */,
+				BA4CDBE21A646A1200D35A8C /* WTMGlyphDetectorView.h */,
+				BA4CDBE31A646A1200D35A8C /* WTMGlyphDetectorView.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
 			);
@@ -810,7 +947,9 @@
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
+				BA4CDBE81A646BDC00D35A8C /* square.json in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
+				BA4CDBE71A646BDC00D35A8C /* circle.json in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
@@ -903,14 +1042,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4CDBDD1A6465E000D35A8C /* NSDictionary_JSONExtensions.m in Sources */,
+				BA4CDBD71A6465E000D35A8C /* CDataScanner.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
+				BA4CDBD91A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				BA4CDBDB1A6465E000D35A8C /* CJSONSerializedData.m in Sources */,
+				BA4CDBB81A6465D200D35A8C /* WTMGlyph.m in Sources */,
+				BA4CDBDC1A6465E000D35A8C /* CDataScanner_Extensions.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */,
+				BA4CDBB91A6465D200D35A8C /* WTMGlyphDefaults.m in Sources */,
 				BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */,
 				BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */,
+				BA4CDBE41A646A1200D35A8C /* WTMGlyphDetectorView.m in Sources */,
+				BA4CDBBA1A6465D200D35A8C /* WTMGlyphDetector.m in Sources */,
 				BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */,
 				BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */,
+				BA4CDBDE1A6465E000D35A8C /* CJSONDeserializer.m in Sources */,
+				BA4CDBDF1A6465E000D35A8C /* CJSONScanner.m in Sources */,
+				BA4CDBE01A6465E000D35A8C /* CJSONSerializer.m in Sources */,
+				BA4CDBBB1A6465D200D35A8C /* WTMGlyphStroke.m in Sources */,
+				BA4CDBB71A6465D200D35A8C /* WTMDetectionResult.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				BA4CDBDA1A6465E000D35A8C /* CJSONSerialization.m in Sources */,
+				BA4CDBBD1A6465D200D35A8C /* WTMGlyphUtilities.m in Sources */,
+				BA4CDBD81A6465E000D35A8C /* CFilteringJSONSerializer.m in Sources */,
+				BA4CDBBC1A6465D200D35A8C /* WTMGlyphTemplate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

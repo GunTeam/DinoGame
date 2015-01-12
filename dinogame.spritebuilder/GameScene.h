@@ -12,6 +12,8 @@
 #import "Nest.h"
 #import "OurNest.h"
 #import "EnemyNest.h"
+#import "WTMGlyphDetector.h"
+#import "WTMGlyphDetectorView.h"
 
 @interface GameScene : CCNode {
     CGFloat screenWidth,screenHeight;
@@ -25,5 +27,8 @@
 
 @property int chanceOfEnemySpawn;
 @property int killBonus; //how many yarns you get upon killing an enemy
+@property (nonatomic, strong) WTMGlyphDetector *glyphDetector;
+@property (nonatomic, strong) NSMutableArray *glyphNamesArray;
+@property (nonatomic, strong) WTMGlyphDetectorView *gestureDetectorView;
 
 @end
