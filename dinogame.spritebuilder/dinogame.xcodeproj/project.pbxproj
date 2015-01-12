@@ -704,11 +704,19 @@
 			name = GlyphDetector;
 			sourceTree = "<group>";
 		};
-		BAE72DCF1A5D997600888317 /* Scenes */ = {
+		BA4CDBE91A646D6E00D35A8C /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
 				BA4CDBE51A646BDC00D35A8C /* circle.json */,
 				BA4CDBE61A646BDC00D35A8C /* square.json */,
+			);
+			name = Shapes;
+			sourceTree = "<group>";
+		};
+		BAE72DCF1A5D997600888317 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BA4CDBE91A646D6E00D35A8C /* Shapes */,
 				BA4A72511A5D9DFC00B649CB /* GameScene.h */,
 				BA4A72521A5D9DFC00B649CB /* GameScene.m */,
 				BA4CDBE21A646A1200D35A8C /* WTMGlyphDetectorView.h */,
