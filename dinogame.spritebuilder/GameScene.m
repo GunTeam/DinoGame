@@ -101,4 +101,15 @@ dinosaur *dino;
     }
 }
 
+-(void)handleSwipeGesture:(UISwipeGestureRecognizer *) sender
+{
+    //Gesture detect - swipe up/down , can be recognized direction
+    if(sender.direction == UISwipeGestureRecognizerDirectionUp)
+    {
+    }
+    else if(sender.direction == UISwipeGestureRecognizerDirectionDown)
+    {
+    }
+}
+
 @end
