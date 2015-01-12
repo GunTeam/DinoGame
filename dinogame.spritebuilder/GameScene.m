@@ -17,13 +17,20 @@ dinosaur *dino;
     
     CGRect screenBound = [[UIScreen mainScreen] bounds];
     CGSize screenSize = screenBound.size;
-    screenWidth = screenSize.width/2;
-    screenHeight = screenSize.height/2;
+    screenWidth = screenSize.width;
+    screenHeight = screenSize.height;
+    
+    //adjust for ipad sizing:
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        screenWidth = screenWidth/2;
+        screenHeight = screenHeight/2;
+    }
     
     strandsOfYarn = 0; //start out currency at 0
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
-    numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"Marker Felt" fontSize:24];
+    numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"TimesNewRomanPSMT" fontSize:24];
     numYarnsLabel.position = ccp((5./6)*screenWidth, (6./7)*screenHeight);
     [self addChild:numYarnsLabel z:1];
     
@@ -34,6 +41,7 @@ dinosaur *dino;
     enemyNest = (EnemyNest *) [CCBReader load:@"EnemyNest"];
     ourNest.position = ccp(0, screenHeight/2);
     enemyNest.position = ccp(screenWidth, screenHeight/2);
+    
     [self addChild:ourNest];
     [self addChild:enemyNest];
 }
@@ -97,7 +105,7 @@ dinosaur *dino;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-        [self spawnEnemyDino];
+//        [self spawnEnemyDino];
     }
 }
 
@@ -106,6 +114,7 @@ dinosaur *dino;
     //Gesture detect - swipe up/down , can be recognized direction
     if(sender.direction == UISwipeGestureRecognizerDirectionUp)
     {
+        CCLOG(@"HELLO");
     }
     else if(sender.direction == UISwipeGestureRecognizerDirectionDown)
     {
