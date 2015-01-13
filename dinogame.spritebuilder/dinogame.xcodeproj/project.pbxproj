@@ -113,6 +113,9 @@
 		BA4CDBE41A646A1200D35A8C /* WTMGlyphDetectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBE31A646A1200D35A8C /* WTMGlyphDetectorView.m */; };
 		BA4CDBE71A646BDC00D35A8C /* circle.json in Resources */ = {isa = PBXBuildFile; fileRef = BA4CDBE51A646BDC00D35A8C /* circle.json */; };
 		BA4CDBE81A646BDC00D35A8C /* square.json in Resources */ = {isa = PBXBuildFile; fileRef = BA4CDBE61A646BDC00D35A8C /* square.json */; };
+		BA4CDBEC1A64C2B200D35A8C /* Pterodactyl.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */; };
+		BA4CDBEF1A64C2C600D35A8C /* Allosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */; };
+		BA4CDBF21A64C2EA00D35A8C /* Triceratops.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */; };
 		BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4CD1A5DB92C007C0E54 /* Nest.m */; };
 		BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */; };
 		BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */; };
@@ -296,6 +299,12 @@
 		BA4CDBE31A646A1200D35A8C /* WTMGlyphDetectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WTMGlyphDetectorView.m; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/WTMGlyphDetectorView.m"; sourceTree = "<group>"; };
 		BA4CDBE51A646BDC00D35A8C /* circle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = circle.json; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/gestures/circle.json"; sourceTree = "<group>"; };
 		BA4CDBE61A646BDC00D35A8C /* square.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = square.json; path = "../../../../Downloads/MultistrokeGestureRecognizer-iOS-master/WTMGlyphDemo/gestures/square.json"; sourceTree = "<group>"; };
+		BA4CDBEA1A64C2B200D35A8C /* Pterodactyl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pterodactyl.h; sourceTree = "<group>"; };
+		BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pterodactyl.m; sourceTree = "<group>"; };
+		BA4CDBED1A64C2C600D35A8C /* Allosaurus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Allosaurus.h; sourceTree = "<group>"; };
+		BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Allosaurus.m; sourceTree = "<group>"; };
+		BA4CDBF01A64C2EA00D35A8C /* Triceratops.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Triceratops.h; sourceTree = "<group>"; };
+		BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Triceratops.m; sourceTree = "<group>"; };
 		BA6DC4CC1A5DB92C007C0E54 /* Nest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nest.h; sourceTree = "<group>"; };
 		BA6DC4CD1A5DB92C007C0E54 /* Nest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nest.m; sourceTree = "<group>"; };
 		BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurNest.h; sourceTree = "<group>"; };
@@ -732,6 +741,12 @@
 			children = (
 				BAE72DD21A5D99A400888317 /* dinosaur.h */,
 				BAE72DD31A5D99A400888317 /* dinosaur.m */,
+				BA4CDBF01A64C2EA00D35A8C /* Triceratops.h */,
+				BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */,
+				BA4CDBED1A64C2C600D35A8C /* Allosaurus.h */,
+				BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */,
+				BA4CDBEA1A64C2B200D35A8C /* Pterodactyl.h */,
+				BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */,
 				BA6DC4CC1A5DB92C007C0E54 /* Nest.h */,
 				BA6DC4CD1A5DB92C007C0E54 /* Nest.m */,
 				BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */,
@@ -1054,11 +1069,14 @@
 				BA4CDBD71A6465E000D35A8C /* CDataScanner.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				BA4CDBD91A6465E000D35A8C /* CJSONDeserializer_BlocksExtensions.m in Sources */,
+				BA4CDBF21A64C2EA00D35A8C /* Triceratops.m in Sources */,
 				BA4CDBDB1A6465E000D35A8C /* CJSONSerializedData.m in Sources */,
 				BA4CDBB81A6465D200D35A8C /* WTMGlyph.m in Sources */,
+				BA4CDBEC1A64C2B200D35A8C /* Pterodactyl.m in Sources */,
 				BA4CDBDC1A6465E000D35A8C /* CDataScanner_Extensions.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */,
+				BA4CDBEF1A64C2C600D35A8C /* Allosaurus.m in Sources */,
 				BA4CDBB91A6465D200D35A8C /* WTMGlyphDefaults.m in Sources */,
 				BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */,
 				BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */,
