@@ -119,6 +119,7 @@
 		BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4CD1A5DB92C007C0E54 /* Nest.m */; };
 		BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */; };
 		BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */; };
+		BAA32F9B1A6721B300945CCD /* Raptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA32F9A1A6721B300945CCD /* Raptor.m */; };
 		BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE72DD31A5D99A400888317 /* dinosaur.m */; };
 /* End PBXBuildFile section */
 
@@ -311,6 +312,8 @@
 		BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurNest.m; sourceTree = "<group>"; };
 		BA6DC4D21A5DBA99007C0E54 /* EnemyNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyNest.h; sourceTree = "<group>"; };
 		BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyNest.m; sourceTree = "<group>"; };
+		BAA32F991A6721B300945CCD /* Raptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Raptor.h; sourceTree = "<group>"; };
+		BAA32F9A1A6721B300945CCD /* Raptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Raptor.m; sourceTree = "<group>"; };
 		BAE72DD21A5D99A400888317 /* dinosaur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dinosaur.h; sourceTree = "<group>"; };
 		BAE72DD31A5D99A400888317 /* dinosaur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dinosaur.m; sourceTree = "<group>"; };
 		D352B48019EC608A00829775 /* MetalShaders */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MetalShaders; path = Source/MetalShaders; sourceTree = "<group>"; };
@@ -741,6 +744,8 @@
 			children = (
 				BAE72DD21A5D99A400888317 /* dinosaur.h */,
 				BAE72DD31A5D99A400888317 /* dinosaur.m */,
+				BAA32F991A6721B300945CCD /* Raptor.h */,
+				BAA32F9A1A6721B300945CCD /* Raptor.m */,
 				BA4CDBF01A64C2EA00D35A8C /* Triceratops.h */,
 				BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */,
 				BA4CDBED1A64C2C600D35A8C /* Allosaurus.h */,
@@ -1094,6 +1099,7 @@
 				BA4CDBBD1A6465D200D35A8C /* WTMGlyphUtilities.m in Sources */,
 				BA4CDBD81A6465E000D35A8C /* CFilteringJSONSerializer.m in Sources */,
 				BA4CDBBC1A6465D200D35A8C /* WTMGlyphTemplate.m in Sources */,
+				BAA32F9B1A6721B300945CCD /* Raptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

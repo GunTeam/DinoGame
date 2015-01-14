@@ -67,11 +67,13 @@ CCPhysicsNode *_physicsNode;
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
 //    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
     
-    self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame:[[CCDirector sharedDirector] view].bounds];
-    self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.gestureDetectorView.delegate = self;
-    [self.gestureDetectorView loadTemplatesWithNames: @"circle", @"square", nil];
-    [[[CCDirector sharedDirector] view] addSubview:self.gestureDetectorView];
+    
+    
+//    self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame:[[CCDirector sharedDirector] view].bounds];
+//    self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    self.gestureDetectorView.delegate = self;
+//    [self.gestureDetectorView loadTemplatesWithNames: @"circle", @"square", nil];
+//    [[[CCDirector sharedDirector] view] addSubview:self.gestureDetectorView];
 }
 
 
@@ -96,10 +98,12 @@ CCPhysicsNode *_physicsNode;
     for(dinosaur *thisDino in ourDinos){
         if([enemyDinos count] != 0){
             dinosaur *firstEnemy = [enemyDinos objectAtIndex:0];
+            
             if( [thisDino collidesWith:firstEnemy]){ // an attack occurs
                 Boolean enemyKilled = [firstEnemy attackedByDino:thisDino];
                 if(enemyKilled){
-                    strandsOfYarn += self.killBonus;
+                    strandsOfYarn += firstEnemy.killBonus;
+                    [enemyDinos removeObject:firstEnemy];
                 }
             }
             else{
@@ -117,7 +121,9 @@ CCPhysicsNode *_physicsNode;
             dinosaur *ourFirstDino = [ourDinos objectAtIndex:0];
             if( [thisEnemy collidesWith:ourFirstDino]){ // an attack occurs
                 Boolean killed = [ourFirstDino attackedByDino:thisEnemy];
-                
+                if(killed){
+                    [ourDinos removeObject:ourFirstDino];
+                }
             }
             else{
                 [thisEnemy moveDinoBackward];
@@ -134,7 +140,7 @@ CCPhysicsNode *_physicsNode;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-//        [self spawnEnemyDino];
+        [self spawnEnemyDino];
     }
 }
 

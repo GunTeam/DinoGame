@@ -23,5 +23,6 @@
 @property double speed;
 @property int attack;
 @property Boolean inAir;
+@property int killBonus;
 
 @end
