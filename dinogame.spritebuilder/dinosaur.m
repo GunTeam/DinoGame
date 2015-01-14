@@ -10,11 +10,15 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay;
 
 -(void) didLoadFromCCB{
+    self.health = 100;
+    self.attack = 10;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
+    self.readyToAttack = true;
+    self.afterAttackDelay = 60;
 }
 
 -(void) moveDinoForward{
@@ -38,12 +42,22 @@
 }
 
 -(Boolean) attackedByDino:(dinosaur *)enemyDino{
-    self.health -= enemyDino.attack;
-    if(self.health <= 0){
-        [self removeFromParent];
-        return true;
+    if(enemyDino.readyToAttack){
+        enemyDino.readyToAttack = false;
+        self.health -= enemyDino.attack;
+        if(self.health <= 0){
+            [self removeFromParent];
+            return true;
+        }
+        return false;
     }
-    return false;
+    else{
+        enemyDino.attackCounter += 1;
+        if(enemyDino.attackCounter > enemyDino.afterAttackDelay){
+            enemyDino.readyToAttack = true;
+        }
+    }
+
 }
 
 @end

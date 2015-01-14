@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "dinosaur.h"
 
-@interface Nest : CCSprite {
+@interface Nest : dinosaur {
     
 }
-
-@property int health;
 
 @end

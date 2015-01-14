@@ -12,9 +12,13 @@
 @implementation Pterodactyl
 
 -(void) didLoadFromCCB{
+    self.health = 100;
+    self.attack = 10;
+    self.speed = 0.01; //default
     self.inAir =true; //default
     ATTACK_THRESHOLD = 0; //number of pix between this dino and its attack target. ptero attacks right over it
-    
+    self.readyToAttack = true;
+    self.afterAttackDelay = 60;
 }
 
 @end

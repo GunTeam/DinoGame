@@ -11,4 +11,14 @@
 
 @implementation Nest
 
+-(void) didLoadFromCCB{
+    self.health = 1000;
+    self.speed = 0; //nest does not move
+    self.inAir =true; //default
+    ATTACK_THRESHOLD = 0; //number of pix between this dino and its attack target. ptero attacks right over it
+    
+    self.attack = 0;
+    self.readyToAttack = false; //nest never attacks
+}
+
 @end

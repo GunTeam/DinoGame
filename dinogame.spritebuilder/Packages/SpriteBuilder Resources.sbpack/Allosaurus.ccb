@@ -58,8 +58,8 @@
 							<key>value</key>
 							<array>
 								<real>1</real>
-								<real>0.30098167061805725</real>
-								<real>0.93234854936599731</real>
+								<real>0.98663425445556641</real>
+								<real>0.99875825643539429</real>
 								<real>1</real>
 							</array>
 						</dict>
@@ -139,7 +139,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string></string>
+					<string>art/allosaurus.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -168,8 +168,8 @@
 				<key>value</key>
 				<array>
 					<real>1</real>
-					<real>0.30098167061805725</real>
-					<real>0.93234854936599731</real>
+					<real>0.98663425445556641</real>
+					<real>0.99875825643539429</real>
 					<real>1</real>
 				</array>
 			</dict>

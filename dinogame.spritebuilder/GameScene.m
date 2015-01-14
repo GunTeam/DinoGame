@@ -85,8 +85,29 @@ CCPhysicsNode *_physicsNode;
 
 }
 
--(void)spawnOurDino{
-    dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
+-(void)spawnRaptorDino{
+    Raptor *newDino = (Raptor*)[CCBReader load:@"Raptor"];
+    newDino.position = ourNest.position;
+    [ourDinos addObject:newDino];
+    [self addChild: newDino];
+}
+
+-(void)spawnTriceratops{
+    dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
+    newDino.position = ourNest.position;
+    [ourDinos addObject:newDino];
+    [self addChild: newDino];
+}
+
+-(void)spawnAllosaurus{
+    dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
+    newDino.position = ourNest.position;
+    [ourDinos addObject:newDino];
+    [self addChild: newDino];
+}
+
+-(void)spawnPterodactyl{
+    dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
     newDino.position = ourNest.position;
     [ourDinos addObject:newDino];
     [self addChild: newDino];

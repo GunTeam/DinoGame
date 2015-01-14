@@ -23,6 +23,9 @@
 @property double speed;
 @property int attack;
 @property Boolean inAir;
+@property Boolean readyToAttack;
+@property int attackCounter;
 @property int killBonus;
+@property int afterAttackDelay; //how many frames the dino waits in between attacks
 
 @end
