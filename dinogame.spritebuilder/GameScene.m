@@ -82,35 +82,46 @@ CCPhysicsNode *_physicsNode;
     newDino.position = enemyNest.position;
     [enemyDinos addObject:newDino];
     [self addChild: newDino];
-
 }
 
 -(void)spawnRaptorDino{
     Raptor *newDino = (Raptor*)[CCBReader load:@"Raptor"];
-    newDino.position = ourNest.position;
-    [ourDinos addObject:newDino];
-    [self addChild: newDino];
+    if(strandsOfYarn > newDino.price){
+        newDino.position = ourNest.position;
+        [ourDinos addObject:newDino];
+        [self addChild: newDino];
+        strandsOfYarn -= newDino.price;
+    }
 }
 
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
-    newDino.position = ourNest.position;
-    [ourDinos addObject:newDino];
-    [self addChild: newDino];
+    if(strandsOfYarn > newDino.price){
+        newDino.position = ourNest.position;
+        [ourDinos addObject:newDino];
+        [self addChild: newDino];
+        strandsOfYarn -= newDino.price;
+    }
 }
 
 -(void)spawnAllosaurus{
     dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
-    newDino.position = ourNest.position;
-    [ourDinos addObject:newDino];
-    [self addChild: newDino];
+    if(strandsOfYarn > newDino.price){
+        newDino.position = ourNest.position;
+        [ourDinos addObject:newDino];
+        [self addChild: newDino];
+        strandsOfYarn -= newDino.price;
+    }
 }
 
 -(void)spawnPterodactyl{
     dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
-    newDino.position = ourNest.position;
-    [ourDinos addObject:newDino];
-    [self addChild: newDino];
+    if(strandsOfYarn > newDino.price){
+        newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+        [ourDinos addObject:newDino];
+        [self addChild: newDino];
+        strandsOfYarn -= newDino.price;
+    }
 }
 
 - (void)update:(CCTime)delta

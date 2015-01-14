@@ -19,6 +19,7 @@
     ATTACK_THRESHOLD = 0; //number of pix between this dino and its attack target. ptero attacks right over it
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
+    self.price = 200;
 }
 
 @end
