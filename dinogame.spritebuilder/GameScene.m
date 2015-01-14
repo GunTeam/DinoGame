@@ -32,7 +32,7 @@ CCPhysicsNode *_physicsNode;
         screenHeight = screenHeight/2;
     }
     
-    strandsOfYarn = 0; //start out currency at 0
+    strandsOfYarn = 200; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
     numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"TimesNewRomanPSMT" fontSize:24];

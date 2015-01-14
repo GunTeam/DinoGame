@@ -13,7 +13,10 @@
 @synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price;
 
 -(void) didLoadFromCCB{
-    self.health = 100;
+    MAX_HEALTH = 100;
+    self.health = MAX_HEALTH;
+    KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
+    
     self.attack = 10;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
@@ -31,8 +34,8 @@
     self.position = ccp( self.position.x - 100*self.speed, self.position.y );
 }
 
--(Boolean) collidesWith:(dinosaur *)enemyDino{
-    if( abs(enemyDino.position.x - self.position.x) <= ATTACK_THRESHOLD){
+-(Boolean) collidesWith:(dinosaur *)otherDino{
+    if( abs(otherDino.position.x - self.position.x) <= ATTACK_THRESHOLD){
         return true;
     }
     return false;
@@ -42,10 +45,20 @@
     enemyDino.health -= self.attack;
 }
 
--(Boolean) attackedByDino:(dinosaur *)enemyDino{
-    if(enemyDino.readyToAttack){
-        enemyDino.readyToAttack = false;
-        self.health -= enemyDino.attack;
+-(void) knockback{
+    self.position = ccp(self.position.x-10, self.position.y);
+}
+
+
+-(Boolean) attackedByDino:(dinosaur *)otherDino{
+    if(otherDino.readyToAttack){
+        otherDino.readyToAttack = false;
+        self.health -= otherDino.attack;
+        
+        if(self.health+otherDino.attack >= KNOCKBACK_THRESHOLD && self.health < KNOCKBACK_THRESHOLD){
+            [self knockback];
+        }
+        
         if(self.health <= 0){
             [self removeFromParent];
             return true;
@@ -53,10 +66,11 @@
         return false;
     }
     else{
-        enemyDino.attackCounter += 1;
-        if(enemyDino.attackCounter > enemyDino.afterAttackDelay){
-            enemyDino.readyToAttack = true;
+        otherDino.attackCounter += 1;
+        if(otherDino.attackCounter > otherDino.afterAttackDelay){
+            otherDino.readyToAttack = true;
         }
+        return false;
     }
 
 }

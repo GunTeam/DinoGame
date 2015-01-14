@@ -11,6 +11,8 @@
 
 @interface dinosaur : CCSprite {
     int ATTACK_THRESHOLD;
+    int KNOCKBACK_THRESHOLD;
+    int MAX_HEALTH; //maximum health
 }
 
 -(void) moveDinoForward;
