@@ -253,7 +253,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Spawn</string>
+							<string>Raptor</string>
 							<false/>
 						</array>
 					</dict>
@@ -593,7 +593,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>117.06876373291016</real>
+							<real>119.14236450195312</real>
 							<real>35.235794067382812</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -676,7 +676,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Spawn</string>
+							<string>Triceratops</string>
 							<false/>
 						</array>
 					</dict>
@@ -919,7 +919,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>175.12956237792969</real>
+							<real>187.5711669921875</real>
 							<real>35.235794067382812</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1002,7 +1002,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Spawn</string>
+							<string>Allosaurus</string>
 							<false/>
 						</array>
 					</dict>
@@ -1245,7 +1245,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>231.11676025390625</real>
+							<real>258.07354736328125</real>
 							<real>35.235794067382812</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1328,7 +1328,7 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Spawn</string>
+							<string>Pterodactyl</string>
 							<false/>
 						</array>
 					</dict>
@@ -1538,8 +1538,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

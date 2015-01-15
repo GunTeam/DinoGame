@@ -23,6 +23,8 @@
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
     self.price = 200;
+    self.killBonus = 10;
+
 }
 
 @end

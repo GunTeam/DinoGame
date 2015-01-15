@@ -23,6 +23,7 @@
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
     self.price = 200;
+    self.killBonus = 10;
 }
 
 -(void) moveDinoForward{
@@ -47,11 +48,17 @@
 
 -(void) knockback{
     self.position = ccp(self.position.x-10, self.position.y);
+//    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
 
+-(void) die{
+//    [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    [self removeFromParent];
+}
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{
     if(otherDino.readyToAttack){
+//        [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
         
@@ -60,7 +67,7 @@
         }
         
         if(self.health <= 0){
-            [self removeFromParent];
+            [self die];
             return true;
         }
         return false;

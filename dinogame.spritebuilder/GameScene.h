@@ -30,7 +30,6 @@
 }
 
 @property int chanceOfEnemySpawn;
-@property int killBonus; //how many yarns you get upon killing an enemy
 @property (nonatomic, strong) WTMGlyphDetector *glyphDetector;
 @property (nonatomic, strong) NSMutableArray *glyphNamesArray;
 @property (nonatomic, strong) WTMGlyphDetectorView *gestureDetectorView;

@@ -40,7 +40,6 @@ CCPhysicsNode *_physicsNode;
     [self addChild:numYarnsLabel z:1];
     
     self.chanceOfEnemySpawn = 5; //percentage of timesteps an enemy is spawned
-    self.killBonus = 10;
     
     ourNest = (OurNest *) [CCBReader load:@"OurNest"];
     enemyNest = (EnemyNest *) [CCBReader load:@"EnemyNest"];
