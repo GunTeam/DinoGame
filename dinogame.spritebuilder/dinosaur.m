@@ -36,7 +36,8 @@
 }
 
 -(Boolean) collidesWith:(dinosaur *)otherDino{
-    if( abs(otherDino.position.x - self.position.x) <= ATTACK_THRESHOLD){
+    int distanceAway = (1./2)*self.contentSize.width + (1./2)*otherDino.contentSize.width;
+    if( abs(otherDino.position.x - self.position.x) <= (ATTACK_THRESHOLD+distanceAway)){
         return true;
     }
     return false;
@@ -57,8 +58,10 @@
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{
+//    CCAnimationManager *animationManager = otherDino.userObject;
     if(otherDino.readyToAttack){
-//        [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
+//        [otherDino.userObject runAnimationsForSequenceNamed:@"Attacking"];
+//        [animationManager runAnimationsForSequenceNamed:@"Attacking"];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
         
