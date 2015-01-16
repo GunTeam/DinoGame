@@ -13,6 +13,7 @@
     int ATTACK_THRESHOLD;
     int KNOCKBACK_THRESHOLD;
     int MAX_HEALTH; //maximum health
+    CCLabelTTF *_healthLabel;
 }
 
 -(void) moveDinoForward;

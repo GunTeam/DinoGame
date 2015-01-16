@@ -1097,8 +1097,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>124</real>
-							<real>-47.500007629394531</real>
+							<real>118</real>
+							<real>29.499992370605469</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1445,7 +1445,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
