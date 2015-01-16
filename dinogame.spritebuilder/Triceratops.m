@@ -12,6 +12,7 @@
 @implementation Triceratops
 
 -(void) didLoadFromCCB{
+    self.isEnemy = false;
     MAX_HEALTH = 1000;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back

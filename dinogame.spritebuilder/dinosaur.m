@@ -13,6 +13,7 @@
 @synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price;
 
 -(void) didLoadFromCCB{
+    self.isEnemy = false;
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
@@ -49,7 +50,13 @@
 }
 
 -(void) knockback{
-    self.position = ccp(self.position.x-10, self.position.y);
+    int knockbackAmount = (0.3)*self.contentSize.width;
+    
+    if(self.isEnemy){ //we'll knock it backwards
+        knockbackAmount *= -1;
+    }
+    
+    self.position = ccp(self.position.x-knockbackAmount, self.position.y);
 //    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
 
