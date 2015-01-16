@@ -49,7 +49,7 @@ CCPhysicsNode *_physicsNode;
     [ourDinos addObject:ourNest];
     [enemyDinos addObject:enemyNest];
     
-//    [self spawnEnemyDino];
+    [self spawnEnemyDino];
 }
 
 
@@ -102,8 +102,40 @@ CCPhysicsNode *_physicsNode;
     CCLOG(@"You win");
 }
 
+- (void) sortOurDinos{
+    [ourDinos sortUsingComparator:
+     ^NSComparisonResult(id firstDino, id secondDino) {
+         dinosaur *d1 = (dinosaur*) firstDino;
+         dinosaur *d2 = (dinosaur*) secondDino;
+        if (d1.position.x < d2.position.x)
+            return NSOrderedDescending;
+        else if (d1.position.x > d2.position.x)
+            return NSOrderedAscending;
+        else
+            return NSOrderedSame;
+    }
+     ];
+}
+
+- (void) sortEnemyDinos{
+    [enemyDinos sortUsingComparator:
+     ^NSComparisonResult(id firstDino, id secondDino) {
+         dinosaur *d1 = (dinosaur*) firstDino;
+         dinosaur *d2 = (dinosaur*) secondDino;
+         if (d1.position.x < d2.position.x)
+             return NSOrderedAscending;
+         else if (d1.position.x > d2.position.x)
+             return NSOrderedDescending;
+         else
+             return NSOrderedSame;
+     }
+     ];
+}
+
 - (void)update:(CCTime)delta
 {
+    [self sortOurDinos];
+    [self sortEnemyDinos];
     //move our dinosaurs forward
     for(dinosaur *thisDino in ourDinos){
         if([enemyDinos count] != 0){
