@@ -207,7 +207,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>2</real>
+						<real>8</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -253,8 +253,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -388,7 +386,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>338</real>
+						<real>332</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -434,8 +432,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -552,7 +548,7 @@
 				<dict>
 					<key>0</key>
 					<dict>
-						<key>position</key>
+						<key>rotation</key>
 						<dict>
 							<key>keyframes</key>
 							<array>
@@ -563,16 +559,13 @@
 										<integer>1</integer>
 									</dict>
 									<key>name</key>
-									<string>position</string>
+									<string>rotation</string>
 									<key>time</key>
-									<real>0.46666666865348816</real>
+									<real>0.13333334028720856</real>
 									<key>type</key>
-									<integer>3</integer>
+									<integer>2</integer>
 									<key>value</key>
-									<array>
-										<real>54</real>
-										<real>72</real>
-									</array>
+									<real>0.0</real>
 								</dict>
 								<dict>
 									<key>easing</key>
@@ -581,22 +574,19 @@
 										<integer>1</integer>
 									</dict>
 									<key>name</key>
-									<string>position</string>
+									<string>rotation</string>
 									<key>time</key>
-									<real>0.83333331346511841</real>
+									<real>0.43333333730697632</real>
 									<key>type</key>
-									<integer>3</integer>
+									<integer>2</integer>
 									<key>value</key>
-									<array>
-										<real>10</real>
-										<real>72</real>
-									</array>
+									<real>10</real>
 								</dict>
 							</array>
 							<key>name</key>
-							<string>position</string>
+							<string>rotation</string>
 							<key>type</key>
-							<integer>3</integer>
+							<integer>2</integer>
 						</dict>
 					</dict>
 				</dict>
@@ -623,19 +613,14 @@
 						<string></string>
 					</dict>
 					<dict>
-						<key>baseValue</key>
-						<array>
-							<real>54</real>
-							<real>72</real>
-						</array>
 						<key>name</key>
 						<string>position</string>
 						<key>type</key>
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>54</real>
-							<real>72</real>
+							<real>105</real>
+							<real>27.999998092651367</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -648,8 +633,8 @@
 						<string>Point</string>
 						<key>value</key>
 						<array>
-							<real>0.5</real>
-							<real>0.5</real>
+							<real>1</real>
+							<real>0.0</real>
 						</array>
 					</dict>
 					<dict>
@@ -664,6 +649,16 @@
 							<false/>
 							<integer>0</integer>
 						</array>
+					</dict>
+					<dict>
+						<key>baseValue</key>
+						<real>0.0</real>
+						<key>name</key>
+						<string>rotation</string>
+						<key>type</key>
+						<string>Degrees</string>
+						<key>value</key>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -844,7 +839,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>1.4285707473754883</real>
+						<real>7.857142448425293</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -890,8 +885,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -1025,7 +1018,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>338</real>
+						<real>332</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1071,8 +1064,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>seqExpanded</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -1154,6 +1145,14 @@
 				</array>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string>opacity</string>
+				<key>type</key>
+				<string>Float</string>
+				<key>value</key>
+				<real>0.0</real>
+			</dict>
+			<dict>
 				<key>baseValue</key>
 				<array>
 					<real>1</real>
@@ -1170,7 +1169,7 @@
 					<real>1</real>
 					<real>0.98663425445556641</real>
 					<real>0.99875825643539429</real>
-					<real>1</real>
+					<real>0.0</real>
 				</array>
 			</dict>
 			<dict>
@@ -1237,7 +1236,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.13333334028720856</real>
+			<real>0.033333335071802139</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
