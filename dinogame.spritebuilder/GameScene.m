@@ -30,7 +30,7 @@ CCPhysicsNode *_physicsNode;
         screenHeight = screenHeight/2;
     }
     
-    strandsOfYarn = 200; //start out currency at 200
+    strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
     numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"TimesNewRomanPSMT" fontSize:24];
@@ -49,7 +49,7 @@ CCPhysicsNode *_physicsNode;
     [ourDinos addObject:ourNest];
     [enemyDinos addObject:enemyNest];
     
-    [self spawnEnemyDino];
+//    [self spawnEnemyDino];
 }
 
 
@@ -100,7 +100,7 @@ CCPhysicsNode *_physicsNode;
 
 -(void)winLevel{
     CCLOG(@"You win");
-}GENERATING68881
+}
 
 - (void)update:(CCTime)delta
 {
@@ -153,12 +153,10 @@ CCPhysicsNode *_physicsNode;
 //        [self spawnEnemyDino];
     }
     
-    
-    dinosaur *lastEnemy = [enemyDinos objectAtIndex:[enemyDinos count]-1];
-    
-    if(![lastEnemy isEnemyNest]){ //the enemy nest was destroyed!!
+    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!
         [self winLevel];
     }
+
 }
 
 
