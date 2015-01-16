@@ -11,5 +11,8 @@
 
 @implementation EnemyNest
 
+-(Boolean) isEnemyNest{
+    return true;
+}
 
 @end

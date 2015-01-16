@@ -98,6 +98,10 @@ CCPhysicsNode *_physicsNode;
     [self addChild: newDino];
 }
 
+-(void)winLevel{
+    CCLOG(@"You win");
+}GENERATING68881
+
 - (void)update:(CCTime)delta
 {
     //move our dinosaurs forward
@@ -147,6 +151,13 @@ CCPhysicsNode *_physicsNode;
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
 //        [self spawnEnemyDino];
+    }
+    
+    
+    dinosaur *lastEnemy = [enemyDinos objectAtIndex:[enemyDinos count]-1];
+    
+    if(![lastEnemy isEnemyNest]){ //the enemy nest was destroyed!!
+        [self winLevel];
     }
 }
 

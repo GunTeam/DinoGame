@@ -23,6 +23,7 @@
 -(Boolean) attackedByDino:(dinosaur *)enemyDino;
 -(void) knockback;
 -(void) die;
+-(Boolean) isEnemyNest;
 
 @property int health;
 @property double speed;

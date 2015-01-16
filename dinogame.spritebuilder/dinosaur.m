@@ -95,4 +95,8 @@
 
 }
 
+-(Boolean) isEnemyNest{
+    return false;
+}
+
 @end
