@@ -63,6 +63,8 @@
 }
 -(void) die{
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
+    [self runAction:mover];
     [self scheduleOnce:@selector(removeFromParent) delay:2];
 }
 
