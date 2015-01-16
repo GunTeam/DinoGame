@@ -8,7 +8,10 @@
 
 #import "dinosaur.h"
 
-@implementation dinosaur
+@implementation dinosaur{
+   CCLabelTTF *_healthLabel;
+}
+
 
 @synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price;
 
@@ -16,7 +19,8 @@
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
-    
+    _healthLabel.string = [NSString stringWithFormat:@"Health: %d", self.health];
+    _healthLabel.scaleX = -1;
     self.attack = 10;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
@@ -65,7 +69,8 @@
         [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
-        
+        _healthLabel.string = [NSString stringWithFormat:@"Health: %d", self.health];
+
         if(self.health+otherDino.attack >= KNOCKBACK_THRESHOLD && self.health < KNOCKBACK_THRESHOLD){
             [self knockback];
         }

@@ -92,7 +92,7 @@ CCPhysicsNode *_physicsNode;
 -(void)addEnemyDinosaur:(dinosaur *)newDino{
     newDino.position = enemyNest.position;
     int enemyCount = [enemyDinos count];
-    [enemyDinos insertObject:newDino atIndex:enemyCount-2];
+    [enemyDinos insertObject:newDino atIndex:enemyCount-1];
     [self addChild: newDino];
 }
 
@@ -144,7 +144,7 @@ CCPhysicsNode *_physicsNode;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-//        [self spawnEnemyDino];
+        [self spawnEnemyDino];
     }
 }
 
