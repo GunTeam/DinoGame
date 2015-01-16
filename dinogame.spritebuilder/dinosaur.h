@@ -20,6 +20,8 @@
 -(Boolean) collidesWith:(dinosaur *)enemyDino;
 -(void) attackDino:(dinosaur *)enemyDino;
 -(Boolean) attackedByDino:(dinosaur *)enemyDino;
+-(void) knockback;
+-(void) die;
 
 @property int health;
 @property double speed;

@@ -9,7 +9,9 @@
 #import "Nest.h"
 
 
-@implementation Nest
+@implementation Nest{
+    CCLabelTTF *_nestHealth;
+}
 
 -(void) didLoadFromCCB{
     self.health = 1000;
@@ -19,6 +21,35 @@
     
     self.attack = 0;
     self.readyToAttack = false; //nest never attacks
+}
+
+-(Boolean) attackedByDino:(dinosaur *)otherDino{
+    //    CCAnimationManager *animationManager = otherDino.userObject;
+    if(otherDino.readyToAttack){
+        //        [otherDino.userObject runAnimationsForSequenceNamed:@"Attacking"];
+        //        [animationManager runAnimationsForSequenceNamed:@"Attacking"];
+        _nestHealth.string = [NSString stringWithFormat:@"Health: %d", self.health];
+        otherDino.readyToAttack = false;
+        self.health -= otherDino.attack;
+        
+        if(self.health+otherDino.attack >= KNOCKBACK_THRESHOLD && self.health < KNOCKBACK_THRESHOLD){
+            [self knockback];
+        }
+        
+        if(self.health <= 0){
+            [self die];
+            return true;
+        }
+        return false;
+    }
+    else{
+        otherDino.attackCounter += 1;
+        if(otherDino.attackCounter > otherDino.afterAttackDelay){
+            otherDino.readyToAttack = true;
+        }
+        return false;
+    }
+    
 }
 
 @end

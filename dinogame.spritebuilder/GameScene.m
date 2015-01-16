@@ -15,8 +15,6 @@ CCPhysicsNode *_physicsNode;
 }
 @synthesize glyphDetector;
 
-
-
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = true;
     
@@ -48,38 +46,17 @@ CCPhysicsNode *_physicsNode;
     
     [self addChild:ourNest];
     [self addChild:enemyNest];
+    [ourDinos addObject:ourNest];
+    [enemyDinos addObject:enemyNest];
     
-    // listen for swipes to the left
-    UISwipeGestureRecognizer * swipeLeft= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeLeft)];
-    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeLeft];
-    // listen for swipes to the right
-    UISwipeGestureRecognizer * swipeRight= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeRight)];
-    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeRight];
-    // listen for swipes up
-    UISwipeGestureRecognizer * swipeUp= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeUp)];
-    swipeUp.direction = UISwipeGestureRecognizerDirectionUp;
-//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeUp];
-    // listen for swipes down
-    UISwipeGestureRecognizer * swipeDown= [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeDown)];
-    swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
-//    [[[CCDirector sharedDirector] view] addGestureRecognizer:swipeDown];
-    
-    
-    
-//    self.gestureDetectorView = [[WTMGlyphDetectorView alloc] initWithFrame:[[CCDirector sharedDirector] view].bounds];
-//    self.gestureDetectorView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//    self.gestureDetectorView.delegate = self;
-//    [self.gestureDetectorView loadTemplatesWithNames: @"circle", @"square", nil];
-//    [[[CCDirector sharedDirector] view] addSubview:self.gestureDetectorView];
 }
 
 
 -(void)spawnEnemyDino{
     dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
     newDino.position = enemyNest.position;
-    [enemyDinos addObject:newDino];
+    int enemyCount = [enemyDinos count];
+    [enemyDinos insertObject:newDino atIndex:enemyCount-2];
     [self addChild: newDino];
 }
 
@@ -105,6 +82,7 @@ CCPhysicsNode *_physicsNode;
 
 -(void)spawnAllosaurus{
     dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
+    newDino.scaleX = -1;
     if(strandsOfYarn > newDino.price){
         newDino.position = ourNest.position;
         [ourDinos addObject:newDino];
@@ -171,26 +149,8 @@ CCPhysicsNode *_physicsNode;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-        [self spawnEnemyDino];
+//        [self spawnEnemyDino];
     }
-}
-
-- (void)swipeLeft {
-    CCLOG(@"swipeLeft");
-}
-- (void)swipeRight {
-    CCLOG(@"swipeRight");
-}
-- (void)swipeDown {
-    CCLOG(@"swipeDown");
-}
-- (void)swipeUp {
-    CCLOG(@"swipeUp");
-}
-
-
-// called on every touch in this scene
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event {
 }
 
 
