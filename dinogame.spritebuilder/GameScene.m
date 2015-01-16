@@ -64,7 +64,8 @@ CCPhysicsNode *_physicsNode;
     Raptor *newDino = (Raptor*)[CCBReader load:@"Raptor"];
     if(strandsOfYarn > newDino.price){
         newDino.position = ourNest.position;
-        [ourDinos addObject:newDino];
+        int usCount = [ourDinos count];
+        [ourDinos insertObject:newDino atIndex:usCount-2];
         [self addChild: newDino];
         strandsOfYarn -= newDino.price;
     }
@@ -72,12 +73,7 @@ CCPhysicsNode *_physicsNode;
 
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
-    if(strandsOfYarn > newDino.price){
-        newDino.position = ourNest.position;
-        [ourDinos addObject:newDino];
-        [self addChild: newDino];
-        strandsOfYarn -= newDino.price;
-    }
+
 }
 
 -(void)spawnAllosaurus{
@@ -85,7 +81,8 @@ CCPhysicsNode *_physicsNode;
     newDino.scaleX = -1;
     if(strandsOfYarn > newDino.price){
         newDino.position = ourNest.position;
-        [ourDinos addObject:newDino];
+        int usCount = [ourDinos count];
+        [ourDinos insertObject:newDino atIndex:usCount-2];
         [self addChild: newDino];
         strandsOfYarn -= newDino.price;
     }
@@ -93,9 +90,21 @@ CCPhysicsNode *_physicsNode;
 
 -(void)spawnPterodactyl{
     dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
+    [self addDinosaur:newDino];
     if(strandsOfYarn > newDino.price){
         newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
-        [ourDinos addObject:newDino];
+        int usCount = [ourDinos count];
+        [ourDinos insertObject:newDino atIndex:usCount-2];
+        [self addChild: newDino];
+        strandsOfYarn -= newDino.price;
+    }
+}
+
+-(void)addDinosaur:(dinosaur *)newDino{
+    if(strandsOfYarn > newDino.price){
+        newDino.position = ourNest.position;
+        int usCount = [ourDinos count];
+        [ourDinos insertObject:newDino atIndex:usCount-2];
         [self addChild: newDino];
         strandsOfYarn -= newDino.price;
     }
