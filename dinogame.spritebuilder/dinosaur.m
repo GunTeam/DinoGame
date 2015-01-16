@@ -22,6 +22,7 @@
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
     self.readyToAttack = true;
     self.afterAttackDelay = 60;
+    self.attackCounter = 0;
     self.price = 200;
     self.killBonus = 10;
 }
@@ -61,7 +62,7 @@
 //    CCAnimationManager *animationManager = otherDino.userObject;
     if(otherDino.readyToAttack){
 //        [otherDino.userObject runAnimationsForSequenceNamed:@"Attacking"];
-//        [animationManager runAnimationsForSequenceNamed:@"Attacking"];
+        [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
         
@@ -79,6 +80,7 @@
         otherDino.attackCounter += 1;
         if(otherDino.attackCounter > otherDino.afterAttackDelay){
             otherDino.readyToAttack = true;
+            otherDino.attackCounter = 0;
         }
         return false;
     }

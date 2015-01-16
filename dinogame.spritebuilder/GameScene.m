@@ -54,60 +54,46 @@ CCPhysicsNode *_physicsNode;
 
 -(void)spawnEnemyDino{
     dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
-    newDino.position = enemyNest.position;
-    int enemyCount = [enemyDinos count];
-    [enemyDinos insertObject:newDino atIndex:enemyCount-2];
-    [self addChild: newDino];
+    [self addEnemyDinosaur:newDino];
 }
 
 -(void)spawnRaptorDino{
     Raptor *newDino = (Raptor*)[CCBReader load:@"Raptor"];
-    if(strandsOfYarn > newDino.price){
-        newDino.position = ourNest.position;
-        int usCount = [ourDinos count];
-        [ourDinos insertObject:newDino atIndex:usCount-2];
-        [self addChild: newDino];
-        strandsOfYarn -= newDino.price;
-    }
+    [self addOurDinosaur:newDino];
 }
 
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
-
+    [self addOurDinosaur:newDino];
 }
 
 -(void)spawnAllosaurus{
     dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
+    [self addOurDinosaur:newDino];
     newDino.scaleX = -1;
-    if(strandsOfYarn > newDino.price){
-        newDino.position = ourNest.position;
-        int usCount = [ourDinos count];
-        [ourDinos insertObject:newDino atIndex:usCount-2];
-        [self addChild: newDino];
-        strandsOfYarn -= newDino.price;
-    }
 }
 
 -(void)spawnPterodactyl{
     dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
-    [self addDinosaur:newDino];
+    [self addOurDinosaur:newDino];
+    newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+}
+
+-(void)addOurDinosaur:(dinosaur *)newDino{
     if(strandsOfYarn > newDino.price){
-        newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+        newDino.position = ourNest.position;
         int usCount = [ourDinos count];
-        [ourDinos insertObject:newDino atIndex:usCount-2];
+        [ourDinos insertObject:newDino atIndex:usCount-1];
         [self addChild: newDino];
         strandsOfYarn -= newDino.price;
     }
 }
 
--(void)addDinosaur:(dinosaur *)newDino{
-    if(strandsOfYarn > newDino.price){
-        newDino.position = ourNest.position;
-        int usCount = [ourDinos count];
-        [ourDinos insertObject:newDino atIndex:usCount-2];
-        [self addChild: newDino];
-        strandsOfYarn -= newDino.price;
-    }
+-(void)addEnemyDinosaur:(dinosaur *)newDino{
+    newDino.position = enemyNest.position;
+    int enemyCount = [enemyDinos count];
+    [enemyDinos insertObject:newDino atIndex:enemyCount-2];
+    [self addChild: newDino];
 }
 
 - (void)update:(CCTime)delta

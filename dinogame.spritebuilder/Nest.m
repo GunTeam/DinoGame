@@ -27,7 +27,7 @@
     //    CCAnimationManager *animationManager = otherDino.userObject;
     if(otherDino.readyToAttack){
         //        [otherDino.userObject runAnimationsForSequenceNamed:@"Attacking"];
-        //        [animationManager runAnimationsForSequenceNamed:@"Attacking"];
+        [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
         _nestHealth.string = [NSString stringWithFormat:@"Health: %d", self.health];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
@@ -46,6 +46,7 @@
         otherDino.attackCounter += 1;
         if(otherDino.attackCounter > otherDino.afterAttackDelay){
             otherDino.readyToAttack = true;
+            otherDino.attackCounter = 0;
         }
         return false;
     }
