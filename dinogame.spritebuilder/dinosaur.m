@@ -59,12 +59,11 @@
     [self runAction:mover];
 
 //    self.position = ccp(self.position.x-knockbackAmount, self.position.y);
-//    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
+    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
-
 -(void) die{
-//    [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
-    [self removeFromParent];
+    [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
+    [self scheduleOnce:@selector(removeFromParent) delay:2];
 }
 
 -(Boolean) attackedByDino:(dinosaur *)otherDino{

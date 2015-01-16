@@ -50,6 +50,7 @@ CCPhysicsNode *_physicsNode;
     [enemyDinos addObject:enemyNest];
     
     [self spawnEnemyDino];
+    [self spawnEnemyDino];
 }
 
 
