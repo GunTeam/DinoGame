@@ -51,12 +51,14 @@
 
 -(void) knockback{
     int knockbackAmount = (0.3)*self.contentSize.width;
-    
     if(self.isEnemy){ //we'll knock it backwards
         knockbackAmount *= -1;
     }
     
-    self.position = ccp(self.position.x-knockbackAmount, self.position.y);
+    CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-knockbackAmount,0)];
+    [self runAction:mover];
+
+//    self.position = ccp(self.position.x-knockbackAmount, self.position.y);
 //    [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
 
