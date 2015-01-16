@@ -156,7 +156,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>242.85714721679688</real>
+						<real>42.857143402099609</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -411,8 +411,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>
@@ -608,7 +606,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.56666666269302368</real>
+			<real>0.10000000149011612</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
