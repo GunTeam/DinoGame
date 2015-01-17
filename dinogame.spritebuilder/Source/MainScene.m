@@ -22,4 +22,24 @@
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"GameScene"]];
 }
 
+-(void)upgradeRaptor{
+
+}
+
+-(void)upgradeTriceratops{
+
+}
+
+-(void)upgradeAllosaurus{
+
+}
+
+-(void)upgradePterodactyl{
+
+}
+
+-(void)upgradeTRex{
+
+}
+
 @end
