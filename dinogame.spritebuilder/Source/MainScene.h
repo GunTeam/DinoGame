@@ -1,3 +1,5 @@
-@interface MainScene : CCNode
+@interface MainScene : CCNode{
+    CGFloat screenWidth,screenHeight;
+}
 
 @end

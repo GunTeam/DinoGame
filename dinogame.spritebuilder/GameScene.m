@@ -37,7 +37,7 @@ CCPhysicsNode *_physicsNode;
     numYarnsLabel.position = ccp((5./6)*screenWidth, (6./7)*screenHeight);
     [self addChild:numYarnsLabel z:1];
     
-    self.chanceOfEnemySpawn = 5; //percentage of timesteps an enemy is spawned
+    self.chanceOfEnemySpawn = 3; //percentage of timesteps an enemy is spawned
     
     ourNest = (OurNest *) [CCBReader load:@"OurNest"];
     enemyNest = (EnemyNest *) [CCBReader load:@"EnemyNest"];
@@ -49,7 +49,6 @@ CCPhysicsNode *_physicsNode;
     [ourDinos addObject:ourNest];
     [enemyDinos addObject:enemyNest];
     
-    [self spawnEnemyDino];
     [self spawnEnemyDino];
 }
 
@@ -183,7 +182,7 @@ CCPhysicsNode *_physicsNode;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-//        [self spawnEnemyDino];
+        [self spawnEnemyDino];
     }
     
     if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!

@@ -57,10 +57,9 @@
     
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(-knockbackAmount,0)];
     [self runAction:mover];
-
-//    self.position = ccp(self.position.x-knockbackAmount, self.position.y);
     [self.animationManager runAnimationsForSequenceNamed:@"Knockback"];
 }
+
 -(void) die{
     [self.animationManager runAnimationsForSequenceNamed:@"Dying"];
     CCActionMoveBy *mover = [CCActionMoveBy actionWithDuration:1 position:ccp(0,-(1./2)*self.contentSize.height)];
