@@ -33,9 +33,8 @@ CCPhysicsNode *_physicsNode;
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
-    numYarnsLabel = [CCLabelTTF labelWithString:@"8" fontName:@"TimesNewRomanPSMT" fontSize:24];
-    numYarnsLabel.position = ccp((5./6)*screenWidth, (6./7)*screenHeight);
-    [self addChild:numYarnsLabel z:1];
+    
+    ballOfYarn = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
     
     self.chanceOfEnemySpawn = 3; //percentage of timesteps an enemy is spawned
     
@@ -178,7 +177,7 @@ CCPhysicsNode *_physicsNode;
     }
     
     strandsOfYarn = strandsOfYarn + 1;
-    [numYarnsLabel setString:[NSString stringWithFormat:@"Num Yarns: %i", strandsOfYarn]];
+    [_numYarnsLabel setString:[NSString stringWithFormat:@"%i", strandsOfYarn]];
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){

@@ -16,6 +16,7 @@
 #import "Nest.h"
 #import "OurNest.h"
 #import "EnemyNest.h"
+#import "BallOfYarn.h"
 #import "WTMGlyphDetector.h"
 #import "WTMGlyphDetectorView.h"
 
@@ -26,7 +27,8 @@
     OurNest *ourNest;
     EnemyNest *enemyNest;
     int strandsOfYarn;
-    CCLabelTTF *numYarnsLabel;
+    CCLabelTTF *_numYarnsLabel;
+    BallOfYarn *ballOfYarn;
 }
 
 @property int chanceOfEnemySpawn;
