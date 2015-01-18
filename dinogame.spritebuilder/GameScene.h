@@ -28,7 +28,7 @@
     EnemyNest *enemyNest;
     int strandsOfYarn;
     CCLabelTTF *_numYarnsLabel;
-    BallOfYarn *ballOfYarn;
+    CCButton *_yarnBallLabel;
 }
 
 @property int chanceOfEnemySpawn;

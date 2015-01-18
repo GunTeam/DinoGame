@@ -34,7 +34,7 @@ CCPhysicsNode *_physicsNode;
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
     
-    ballOfYarn = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
+//    ballOfYarn = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
     
     self.chanceOfEnemySpawn = 3; //percentage of timesteps an enemy is spawned
     
@@ -49,6 +49,7 @@ CCPhysicsNode *_physicsNode;
     [enemyDinos addObject:enemyNest];
     
     [self spawnEnemyDino];
+    
 }
 
 
@@ -99,6 +100,10 @@ CCPhysicsNode *_physicsNode;
 
 -(void)winLevel{
     CCLOG(@"You win");
+}
+
+-(void)loseLevel{
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
 
 - (void) sortOurDinos{
@@ -187,8 +192,33 @@ CCPhysicsNode *_physicsNode;
     if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!
         [self winLevel];
     }
+    
+    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) { //our nest was destroyed!!
+        [self loseLevel];
+    }
 
 }
+
+-(void) ballOfYarn{
+        CCSprite *newSprite = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
+        newSprite.position = _yarnBallLabel.position;
+        [self addChild:newSprite];
+}
+
+- (void)selectSpriteForTouch:(CGPoint)touchLocation {
+//    if (CGRectContainsPoint(ballOfYarn.boundingBox, touchLocation)) {
+//        newSprite = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
+//        newSprite.position = ourNest.position;
+//        [self addChild:newSprite];
+//    }
+}
+
+//-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
+//    CGPoint touchLocation = [touch locationInView: [touch view]];
+//    touchLocation = [[CCDirector sharedDirector] convertToGL:touchLocation];
+//    CGPoint nodeTouchLocation = [self convertToNodeSpace:touchLocation];
+//    [self selectSpriteForTouch:nodeTouchLocation];
+//}
 
 
 @end
