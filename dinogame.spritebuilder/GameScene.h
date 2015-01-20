@@ -17,6 +17,7 @@
 #import "OurNest.h"
 #import "EnemyNest.h"
 #import "BallOfYarn.h"
+#import "TreePot.h"
 #import "WTMGlyphDetector.h"
 #import "WTMGlyphDetectorView.h"
 

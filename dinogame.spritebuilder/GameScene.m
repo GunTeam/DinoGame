@@ -199,26 +199,7 @@ CCPhysicsNode *_physicsNode;
 
 }
 
--(void) ballOfYarn{
-        CCSprite *newSprite = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
-        newSprite.position = _yarnBallLabel.position;
-        [self addChild:newSprite];
+-(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair yarn:(BallOfYarn *)ballOfYarn pot:(TreePot *) pot{
+    
 }
-
-- (void)selectSpriteForTouch:(CGPoint)touchLocation {
-//    if (CGRectContainsPoint(ballOfYarn.boundingBox, touchLocation)) {
-//        newSprite = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
-//        newSprite.position = ourNest.position;
-//        [self addChild:newSprite];
-//    }
-}
-
-//-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event{
-//    CGPoint touchLocation = [touch locationInView: [touch view]];
-//    touchLocation = [[CCDirector sharedDirector] convertToGL:touchLocation];
-//    CGPoint nodeTouchLocation = [self convertToNodeSpace:touchLocation];
-//    [self selectSpriteForTouch:nodeTouchLocation];
-//}
-
-
 @end
