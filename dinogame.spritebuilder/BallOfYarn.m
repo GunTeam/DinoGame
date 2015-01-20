@@ -26,18 +26,17 @@
 {
     // we want to know the location of our touch in this scene
     CGPoint touchLocation = [touch locationInNode:self.parent];
-    CCLOG(@"%f", touchLocation.x);
     self.position = touchLocation;
 }
 
 -(void) touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [self removeFromParent];
+//    [self removeFromParent];
 }
 
 -(void) touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [self removeFromParent];
+//    [self removeFromParent];
 }
 
 @end

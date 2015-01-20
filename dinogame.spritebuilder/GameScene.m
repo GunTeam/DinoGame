@@ -203,6 +203,8 @@ CCPhysicsNode *_physicsNode;
 }
 
 -(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair yarn:(BallOfYarn *)ballOfYarn pot:(TreePot *) pot{
+    //do stuff
+    CCLOG(@"hit");
     return NO;
 }
 @end

@@ -435,8 +435,6 @@
 						<array/>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -505,7 +503,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>art/bird-nests-natural-angel-vine-with-3-blue-eggs-3.png</string>
+					<string>art/nest.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -541,6 +539,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

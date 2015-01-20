@@ -505,7 +505,7 @@
 				<key>value</key>
 				<array>
 					<string></string>
-					<string>art/nest-03.png</string>
+					<string>art/enemyNest.png</string>
 				</array>
 			</dict>
 			<dict>
@@ -541,6 +541,8 @@
 				<array/>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 		<key>seqExpanded</key>
 		<true/>
 	</dict>
