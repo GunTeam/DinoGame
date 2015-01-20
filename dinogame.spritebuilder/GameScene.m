@@ -13,7 +13,6 @@ dinosaur *dino;
 @implementation GameScene{
 CCPhysicsNode *_physicsNode;
 }
-@synthesize glyphDetector;
 
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = true;

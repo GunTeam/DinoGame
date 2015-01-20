@@ -19,8 +19,6 @@
 #import "BallOfYarn.h"
 #import "TreePot.h"
 #import "MainScene.h"
-#import "WTMGlyphDetector.h"
-#import "WTMGlyphDetectorView.h"
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;
@@ -34,8 +32,5 @@
 }
 
 @property int chanceOfEnemySpawn;
-@property (nonatomic, strong) WTMGlyphDetector *glyphDetector;
-@property (nonatomic, strong) NSMutableArray *glyphNamesArray;
-@property (nonatomic, strong) WTMGlyphDetectorView *gestureDetectorView;
 
 @end
