@@ -92,6 +92,7 @@
 		B77F1B4017B978D7009739AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B3F17B978D7009739AE /* CoreGraphics.framework */; };
 		B77F1B4217B978D7009739AE /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77F1B4117B978D7009739AE /* CoreText.framework */; };
 		B78A0B10198AF87200C63841 /* Published-Android in Resources */ = {isa = PBXBuildFile; fileRef = B78A0B0F198AF87200C63841 /* Published-Android */; };
+		BA1591CD1A6F1F150086EBA0 /* Stegosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA1591CC1A6F1F150086EBA0 /* Stegosaurus.m */; };
 		BA4A72531A5D9DFC00B649CB /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4A72521A5D9DFC00B649CB /* GameScene.m */; };
 		BA4CDBEC1A64C2B200D35A8C /* Pterodactyl.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */; };
 		BA4CDBEF1A64C2C600D35A8C /* Allosaurus.m in Sources */ = {isa = PBXBuildFile; fileRef = BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */; };
@@ -99,7 +100,7 @@
 		BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4CD1A5DB92C007C0E54 /* Nest.m */; };
 		BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */; };
 		BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */ = {isa = PBXBuildFile; fileRef = BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */; };
-		BAA32F9B1A6721B300945CCD /* Raptor.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA32F9A1A6721B300945CCD /* Raptor.m */; };
+		BAA32F9B1A6721B300945CCD /* TRex.m in Sources */ = {isa = PBXBuildFile; fileRef = BAA32F9A1A6721B300945CCD /* TRex.m */; };
 		BAC01C251A6C5AFD00AF5F4D /* BallOfYarn.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC01C241A6C5AFD00AF5F4D /* BallOfYarn.m */; };
 		BAC01C291A6DF8B200AF5F4D /* TreePot.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC01C281A6DF8B200AF5F4D /* TreePot.m */; };
 		BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE72DD31A5D99A400888317 /* dinosaur.m */; };
@@ -239,6 +240,8 @@
 		B77F1B4117B978D7009739AE /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		B78A0B0F198AF87200C63841 /* Published-Android */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Published-Android"; sourceTree = "<group>"; };
 		B7B3713D180358F1007369CC /* libObjectiveChipmunk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libObjectiveChipmunk.a; path = "../libs/cocos2d-iphone/external/Chipmunk/xcode/build/Debug-iphoneos/libObjectiveChipmunk.a"; sourceTree = "<group>"; };
+		BA1591CB1A6F1F150086EBA0 /* Stegosaurus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stegosaurus.h; sourceTree = "<group>"; };
+		BA1591CC1A6F1F150086EBA0 /* Stegosaurus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stegosaurus.m; sourceTree = "<group>"; };
 		BA4A72511A5D9DFC00B649CB /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
 		BA4A72521A5D9DFC00B649CB /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 		BA4CDBEA1A64C2B200D35A8C /* Pterodactyl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pterodactyl.h; sourceTree = "<group>"; };
@@ -253,8 +256,8 @@
 		BA6DC4D01A5DBA8E007C0E54 /* OurNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurNest.m; sourceTree = "<group>"; };
 		BA6DC4D21A5DBA99007C0E54 /* EnemyNest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyNest.h; sourceTree = "<group>"; };
 		BA6DC4D31A5DBA99007C0E54 /* EnemyNest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyNest.m; sourceTree = "<group>"; };
-		BAA32F991A6721B300945CCD /* Raptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Raptor.h; sourceTree = "<group>"; };
-		BAA32F9A1A6721B300945CCD /* Raptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Raptor.m; sourceTree = "<group>"; };
+		BAA32F991A6721B300945CCD /* TRex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRex.h; sourceTree = "<group>"; };
+		BAA32F9A1A6721B300945CCD /* TRex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRex.m; sourceTree = "<group>"; };
 		BAC01C231A6C5AFD00AF5F4D /* BallOfYarn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BallOfYarn.h; sourceTree = "<group>"; };
 		BAC01C241A6C5AFD00AF5F4D /* BallOfYarn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BallOfYarn.m; sourceTree = "<group>"; };
 		BAC01C271A6DF8B200AF5F4D /* TreePot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreePot.h; sourceTree = "<group>"; };
@@ -589,6 +592,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		BA1591CA1A6F1ED00086EBA0 /* Dinos */ = {
+			isa = PBXGroup;
+			children = (
+				BAA32F991A6721B300945CCD /* TRex.h */,
+				BAA32F9A1A6721B300945CCD /* TRex.m */,
+				BA1591CB1A6F1F150086EBA0 /* Stegosaurus.h */,
+				BA1591CC1A6F1F150086EBA0 /* Stegosaurus.m */,
+				BA4CDBF01A64C2EA00D35A8C /* Triceratops.h */,
+				BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */,
+				BA4CDBED1A64C2C600D35A8C /* Allosaurus.h */,
+				BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */,
+				BA4CDBEA1A64C2B200D35A8C /* Pterodactyl.h */,
+				BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */,
+				BAE72DD21A5D99A400888317 /* dinosaur.h */,
+				BAE72DD31A5D99A400888317 /* dinosaur.m */,
+			);
+			name = Dinos;
+			sourceTree = "<group>";
+		};
 		BAE72DCF1A5D997600888317 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -603,20 +625,11 @@
 		BAE72DD11A5D998900888317 /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				BAE72DD21A5D99A400888317 /* dinosaur.h */,
-				BAE72DD31A5D99A400888317 /* dinosaur.m */,
+				BA1591CA1A6F1ED00086EBA0 /* Dinos */,
 				BAC01C231A6C5AFD00AF5F4D /* BallOfYarn.h */,
 				BAC01C241A6C5AFD00AF5F4D /* BallOfYarn.m */,
 				BAC01C271A6DF8B200AF5F4D /* TreePot.h */,
 				BAC01C281A6DF8B200AF5F4D /* TreePot.m */,
-				BAA32F991A6721B300945CCD /* Raptor.h */,
-				BAA32F9A1A6721B300945CCD /* Raptor.m */,
-				BA4CDBF01A64C2EA00D35A8C /* Triceratops.h */,
-				BA4CDBF11A64C2EA00D35A8C /* Triceratops.m */,
-				BA4CDBED1A64C2C600D35A8C /* Allosaurus.h */,
-				BA4CDBEE1A64C2C600D35A8C /* Allosaurus.m */,
-				BA4CDBEA1A64C2B200D35A8C /* Pterodactyl.h */,
-				BA4CDBEB1A64C2B200D35A8C /* Pterodactyl.m */,
 				BA6DC4CC1A5DB92C007C0E54 /* Nest.h */,
 				BA6DC4CD1A5DB92C007C0E54 /* Nest.m */,
 				BA6DC4CF1A5DBA8E007C0E54 /* OurNest.h */,
@@ -942,11 +955,12 @@
 				BA4CDBEF1A64C2C600D35A8C /* Allosaurus.m in Sources */,
 				BA6DC4D11A5DBA8E007C0E54 /* OurNest.m in Sources */,
 				BA6DC4CE1A5DB92C007C0E54 /* Nest.m in Sources */,
+				BA1591CD1A6F1F150086EBA0 /* Stegosaurus.m in Sources */,
 				BAE72DD41A5D99A400888317 /* dinosaur.m in Sources */,
 				BA6DC4D41A5DBA99007C0E54 /* EnemyNest.m in Sources */,
 				BAC01C251A6C5AFD00AF5F4D /* BallOfYarn.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
-				BAA32F9B1A6721B300945CCD /* Raptor.m in Sources */,
+				BAA32F9B1A6721B300945CCD /* TRex.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

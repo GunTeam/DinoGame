@@ -6,10 +6,10 @@
 //  Copyright 2015 Apportable. All rights reserved.
 //
 
-#import "Raptor.h"
+#import "TRex.h"
 
 
-@implementation Raptor
+@implementation TRex
 
 -(void) didLoadFromCCB{
     self.isEnemy = false;

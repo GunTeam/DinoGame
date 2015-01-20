@@ -10,7 +10,7 @@
 #import "cocos2d.h"
 #import "dinosaur.h"
 
-@interface Raptor : dinosaur {
+@interface TRex : dinosaur {
     
 }
 
