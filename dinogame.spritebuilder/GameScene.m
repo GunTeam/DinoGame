@@ -30,11 +30,12 @@ CCPhysicsNode *_physicsNode;
         screenHeight = screenHeight/2;
     }
     
+    _physicsNode.collisionDelegate = self;
+    _physicsNode.debugDraw = true;
+    
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
-    
-//    ballOfYarn = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
     
     self.chanceOfEnemySpawn = 3; //percentage of timesteps an enemy is spawned
     
@@ -103,6 +104,8 @@ CCPhysicsNode *_physicsNode;
 }
 
 -(void)loseLevel{
+//    CCLOG(@"You win");
+
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
 
@@ -186,7 +189,7 @@ CCPhysicsNode *_physicsNode;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-        [self spawnEnemyDino];
+//        [self spawnEnemyDino];
     }
     
     if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!
@@ -200,6 +203,6 @@ CCPhysicsNode *_physicsNode;
 }
 
 -(BOOL) ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair yarn:(BallOfYarn *)ballOfYarn pot:(TreePot *) pot{
-    
+    return NO;
 }
 @end

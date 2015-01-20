@@ -18,10 +18,11 @@
 #import "EnemyNest.h"
 #import "BallOfYarn.h"
 #import "TreePot.h"
+#import "MainScene.h"
 #import "WTMGlyphDetector.h"
 #import "WTMGlyphDetectorView.h"
 
-@interface GameScene : CCNode {
+@interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;
     CCPhysicsNode *physicsNode;
     NSMutableArray *ourDinos, *enemyDinos;
