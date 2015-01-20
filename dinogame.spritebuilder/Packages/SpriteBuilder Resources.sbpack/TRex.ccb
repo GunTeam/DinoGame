@@ -201,7 +201,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-15</real>
+						<real>-14.000000953674316</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -442,7 +442,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-20</real>
+						<real>-16.000001907348633</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -791,7 +791,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>-2.5</real>
+						<real>-2.0000002384185791</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1002,7 +1002,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>15</real>
+						<real>14.000000953674316</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1243,7 +1243,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>20</real>
+						<real>16.000001907348633</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1683,7 +1683,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>2</real>
 			<key>name</key>
@@ -1691,7 +1691,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1.5</real>
+			<real>1.4666666984558105</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

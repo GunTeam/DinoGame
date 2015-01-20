@@ -58,9 +58,10 @@ CCPhysicsNode *_physicsNode;
     [self addEnemyDinosaur:newDino];
 }
 
--(void)spawnTRexDino{
+-(void)spawnTRex{
     TRex *newDino = (TRex*)[CCBReader load:@"TRex"];
     [self addOurDinosaur:newDino];
+    newDino.scaleX = -1;
 }
 
 -(void)spawnTriceratops{
