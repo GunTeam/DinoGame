@@ -80,6 +80,13 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>art/Sapling/sapling.png</key>
+		<dict>
+			<key>isDirty</key>
+			<true/>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>

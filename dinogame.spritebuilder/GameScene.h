@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "dinosaur.h"
-#import "Raptor.h"
+#import "TRex.h"
+#import "Stegosaurus.h"
 #import "Triceratops.h"
 #import "Allosaurus.h"
 #import "Pterodactyl.h"
