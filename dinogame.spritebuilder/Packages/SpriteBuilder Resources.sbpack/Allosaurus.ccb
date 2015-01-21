@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -250,7 +250,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>6</real>
+						<real>345</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -474,7 +474,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>334</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -728,7 +728,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>1</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -952,7 +952,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>5.7142853736877441</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1319,7 +1319,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>334</real>
+						<real>5</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1774,7 +1774,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>92</real>
+							<real>91.599998474121094</real>
 							<real>29.000001907348633</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1813,7 +1813,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-1.9073486328125e-06</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2171,8 +2171,8 @@
 				<key>value</key>
 				<array>
 					<real>1</real>
-					<real>0.98663425445556641</real>
-					<real>0.99875825643539429</real>
+					<real>1</real>
+					<real>1</real>
 					<real>0.0</real>
 				</array>
 			</dict>
@@ -2240,7 +2240,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.066666670143604279</real>
+			<real>0.26666668057441711</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -2276,7 +2276,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>1</real>
+			<real>0.53333336114883423</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
