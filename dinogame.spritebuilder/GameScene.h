@@ -23,7 +23,7 @@
 
 @interface GameScene : CCNode <CCPhysicsCollisionDelegate>{
     CGFloat screenWidth,screenHeight;
-    CCPhysicsNode *physicsNode;
+    CCPhysicsNode *_physicsNode;
     NSMutableArray *ourDinos, *enemyDinos;
     OurNest *ourNest;
     EnemyNest *enemyNest;
