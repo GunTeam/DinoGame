@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>3</integer>
+	<integer>1</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -417,7 +417,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>12</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -913,7 +913,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-32</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -1586,8 +1586,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>19.000005722045898</real>
-										<real>60</real>
+										<real>20.000005722045898</real>
+										<real>64</real>
 									</array>
 								</dict>
 								<dict>
@@ -1794,7 +1794,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>11.000003814697266</real>
+							<real>13.000006675720215</real>
 							<real>36</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1833,7 +1833,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-4</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2260,7 +2260,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-12</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2802,7 +2802,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>32</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3258,7 +3258,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.26666668057441711</real>
+			<real>0.40000000596046448</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
