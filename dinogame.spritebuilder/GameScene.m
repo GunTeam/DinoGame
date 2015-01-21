@@ -47,6 +47,12 @@ dinosaur *dino;
     ourNest.position = ccp(0, screenHeight/2);
     enemyNest.position = ccp(screenWidth, screenHeight/2);
     
+    Stegosaurus *stego = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
+    Triceratops *trice = (Triceratops*)[CCBReader load:@"Triceratops"];
+    
+    _stegoPrice.string = [NSString stringWithFormat:@"%d", stego.price];
+    _tricePrice.string = [NSString stringWithFormat:@"%d", trice.price];
+    
     [self addChild:ourNest];
     [self addChild:enemyNest];
     [ourDinos addObject:ourNest];

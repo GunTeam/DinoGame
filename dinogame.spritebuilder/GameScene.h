@@ -30,6 +30,8 @@
     int strandsOfYarn;
     CCLabelTTF *_numYarnsLabel;
     CCButton *_yarnBallLabel;
+    CCLabelTTF *_stegoPrice;
+    CCLabelTTF *_tricePrice;
 }
 
 @property int chanceOfEnemySpawn;
