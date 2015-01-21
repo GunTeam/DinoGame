@@ -31,11 +31,6 @@ dinosaur *dino;
     _physicsNode.collisionDelegate = self;
     _physicsNode.debugDraw = true;
     
-    BallOfYarn *yarn = (BallOfYarn *) [CCBReader load:@"BallOfYarn"];
-    yarn.position = CGPointMake(.9, .9);
-    yarn.physicsBody.affectedByGravity = false;
-    [_physicsNode addChild:yarn];
-    
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
