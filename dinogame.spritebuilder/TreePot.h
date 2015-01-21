@@ -10,7 +10,9 @@
 #import "cocos2d.h"
 
 @interface TreePot : CCSprite {
-    
+    CCSprite *small, *medium, *big;
 }
+
+-(void) grow;
 
 @end

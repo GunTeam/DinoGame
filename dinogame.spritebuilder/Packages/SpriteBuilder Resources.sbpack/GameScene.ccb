@@ -179,8 +179,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>56.934360504150391</real>
-							<real>35.235794067382812</real>
+							<real>44.492759704589844</real>
+							<real>29.014993667602539</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -204,8 +204,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>0.60798108577728271</real>
-							<real>1</real>
+							<real>0.27671721577644348</real>
+							<real>0.27671721577644348</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -228,8 +228,8 @@
 						<string>Size</string>
 						<key>value</key>
 						<array>
-							<real>40</real>
-							<real>40</real>
+							<real>250</real>
+							<real>193.5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 						</array>
@@ -262,8 +262,8 @@
 						<string>String</string>
 						<key>value</key>
 						<array>
-							<string>Stego</string>
-							<false/>
+							<string></string>
+							<true/>
 						</array>
 					</dict>
 					<dict>
@@ -274,7 +274,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonNormal.png</string>
+							<string>art/Button Icons/Stegosaurus.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -285,7 +285,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>ccbResources/ccbButtonHighlighted.png</string>
+							<string>art/Button Icons/Stegosaurus.png</string>
 						</array>
 					</dict>
 					<dict>
@@ -472,6 +472,8 @@
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
