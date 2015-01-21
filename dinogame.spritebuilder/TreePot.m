@@ -11,6 +11,12 @@
 
 @implementation TreePot
 
+-(void) didLoadFromCCB{
+    small.visible = false;
+    medium.visible = false;
+    big.visible = false;
+}
+
 
 -(void) grow{
     if(small.visible == true){

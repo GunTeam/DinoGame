@@ -19,6 +19,7 @@
 {
     BallOfYarn *newBall = (BallOfYarn*)[CCBReader load:@"BallOfYarn"];
     [self.parent addChild:newBall];
+    newBall.scale = 0.428;
     newBall.position = self.position;
 }
 
@@ -31,12 +32,12 @@
 
 -(void) touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-//    [self removeFromParent];
+    [self removeFromParent];
 }
 
 -(void) touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-//    [self removeFromParent];
+    [self removeFromParent];
 }
 
 @end
