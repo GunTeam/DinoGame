@@ -68,7 +68,8 @@ CCPhysicsNode *_physicsNode;
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
     [self addOurDinosaur:newDino];
-    
+    newDino.scaleX = -1;
+    [newDino reverseHealthLabel];
 }
 
 -(void)spawnStegosaurus{
@@ -200,11 +201,13 @@ CCPhysicsNode *_physicsNode;
 //        [self spawnEnemyDino];
     }
     
-    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!
+    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) {
+        //the enemy nest was destroyed!!
         [self winLevel];
     }
     
-    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) { //our nest was destroyed!!
+    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) {
+        //our nest was destroyed!!
         [self loseLevel];
     }
 
