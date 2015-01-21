@@ -11,7 +11,6 @@
 dinosaur *dino;
 
 @implementation GameScene{
-CCPhysicsNode *_physicsNode;
 }
 
 -(void) didLoadFromCCB {
@@ -30,7 +29,12 @@ CCPhysicsNode *_physicsNode;
     }
     
     _physicsNode.collisionDelegate = self;
-//    _physicsNode.debugDraw = true;
+    _physicsNode.debugDraw = true;
+    
+    BallOfYarn *yarn = (BallOfYarn *) [CCBReader load:@"BallOfYarn"];
+    yarn.position = CGPointMake(.9, .9);
+    yarn.physicsBody.affectedByGravity = false;
+    [_physicsNode addChild:yarn];
     
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
@@ -68,7 +72,8 @@ CCPhysicsNode *_physicsNode;
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
     [self addOurDinosaur:newDino];
-    
+    newDino.scaleX = -1;
+    [newDino reverseHealthLabel];
 }
 
 -(void)spawnStegosaurus{
@@ -200,11 +205,13 @@ CCPhysicsNode *_physicsNode;
 //        [self spawnEnemyDino];
     }
     
-    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) { //the enemy nest was destroyed!!
+    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) {
+        //the enemy nest was destroyed!!
         [self winLevel];
     }
     
-    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) { //our nest was destroyed!!
+    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) {
+        //our nest was destroyed!!
         [self loseLevel];
     }
 

@@ -32,12 +32,12 @@
 
 -(void) touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [self removeFromParent];
+//    [self removeFromParent];
 }
 
 -(void) touchCancelled:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [self removeFromParent];
+//    [self removeFromParent];
 }
 
 @end
