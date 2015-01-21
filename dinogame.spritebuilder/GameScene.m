@@ -30,7 +30,7 @@ CCPhysicsNode *_physicsNode;
     }
     
     _physicsNode.collisionDelegate = self;
-    _physicsNode.debugDraw = true;
+//    _physicsNode.debugDraw = true;
     
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];

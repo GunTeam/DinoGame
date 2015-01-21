@@ -146,6 +146,8 @@
 						<real>1</real>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2373,8 +2375,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>154.39358520507812</real>
-							<real>327.82080078125</real>
+							<real>150.24638366699219</real>
+							<real>342.33599853515625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2387,8 +2389,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.56779539585113525</real>
+							<real>0.56779539585113525</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2435,8 +2437,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>245.63198852539062</real>
-							<real>330.93121337890625</real>
+							<real>241.48478698730469</real>
+							<real>341.29922485351562</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2449,8 +2451,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.59379321336746216</real>
+							<real>0.59379321336746216</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2497,8 +2499,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>329.61282348632812</real>
-							<real>329.8944091796875</real>
+							<real>329.61279296875</real>
+							<real>342.33599853515625</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2511,8 +2513,8 @@
 						<string>ScaleLock</string>
 						<key>value</key>
 						<array>
-							<real>1</real>
-							<real>1</real>
+							<real>0.59551924467086792</real>
+							<real>0.59551924467086792</real>
 							<false/>
 							<integer>0</integer>
 						</array>
@@ -2526,8 +2528,6 @@
 						<string>Sapling.ccb</string>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 		</array>
 		<key>customClass</key>

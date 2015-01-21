@@ -82,8 +82,6 @@
 		<dict/>
 		<key>art/Sapling/sapling.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>
