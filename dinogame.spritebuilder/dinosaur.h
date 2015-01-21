@@ -24,6 +24,7 @@
 -(void) knockback;
 -(void) die;
 -(Boolean) isEnemyNest;
+-(void) reverseHealthLabel;
 
 @property int health;
 @property double speed;

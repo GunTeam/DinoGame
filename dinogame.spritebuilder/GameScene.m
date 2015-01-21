@@ -62,11 +62,13 @@ CCPhysicsNode *_physicsNode;
     TRex *newDino = (TRex*)[CCBReader load:@"TRex"];
     [self addOurDinosaur:newDino];
     newDino.scaleX = -1;
+    [newDino reverseHealthLabel];
 }
 
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
     [self addOurDinosaur:newDino];
+    
 }
 
 -(void)spawnStegosaurus{
@@ -78,6 +80,7 @@ CCPhysicsNode *_physicsNode;
     dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
     [self addOurDinosaur:newDino];
     newDino.scaleX = -1;
+    [newDino reverseHealthLabel];
 }
 
 -(void)spawnPterodactyl{

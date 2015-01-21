@@ -99,4 +99,8 @@
     return false;
 }
 
+-(void) reverseHealthLabel{
+    _healthLabel.scaleX = -1;
+}
+
 @end
