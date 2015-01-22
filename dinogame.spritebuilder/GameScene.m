@@ -80,6 +80,8 @@ dinosaur *dino;
 -(void)spawnStegosaurus{
     dinosaur *newDino = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
     [self addOurDinosaur:newDino];
+    newDino.scaleX = -1;
+    [newDino reverseHealthLabel];
 }
 
 -(void)spawnAllosaurus{
@@ -203,7 +205,7 @@ dinosaur *dino;
     
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
-//        [self spawnEnemyDino];
+        [self spawnEnemyDino];
     }
     
     if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) {
