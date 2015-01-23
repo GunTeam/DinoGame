@@ -18,7 +18,7 @@
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
-    _healthLabel.string = [NSString stringWithFormat:@"%d", self.health];
+    _healthLabel.string = [NSString stringWithFormat:@"%f", self.health];
     self.attack = 10;
     self.speed = 0.01; //default
     ATTACK_THRESHOLD = 10; //number of pix between this dino and its attack target. e.g. some dinosaurs get closer than others to their enemy
@@ -29,11 +29,16 @@
     self.killBonus = 10;
 }
 
--(void) changeLevelMultiplier: (float) newMultiplier{
+-(void) setHealthLabel{
+    _healthLabel.string = [NSString stringWithFormat:@"%f", self.health];
+}
+
+-(void) changeLevelMultiplier: (double) newMultiplier{
     self.health *= levelMultiplier;
     self.speed *= levelMultiplier;
     self.attack *= levelMultiplier;
     self.attackCounter *= levelMultiplier;
+    self.killBonus *= levelMultiplier;
 }
 
 -(void) moveDinoForward{
@@ -80,8 +85,7 @@
         [otherDino.animationManager runAnimationsForSequenceNamed:@"Attacking"];
         otherDino.readyToAttack = false;
         self.health -= otherDino.attack;
-        _healthLabel.string = [NSString stringWithFormat:@"%d", self.health];
-
+        [self setHealthLabel];
         if(self.health+otherDino.attack >= KNOCKBACK_THRESHOLD && self.health < KNOCKBACK_THRESHOLD){
             [self knockback];
         }

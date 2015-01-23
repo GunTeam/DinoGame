@@ -13,6 +13,8 @@ dinosaur *dino;
 @implementation GameScene{
 }
 
+@synthesize chanceOfEnemySpawn, level;
+
 -(void) didLoadFromCCB {
     self.userInteractionEnabled = true;
     
@@ -31,6 +33,8 @@ dinosaur *dino;
     _physicsNode.collisionDelegate = self;
     _physicsNode.debugDraw = true;
     
+    
+    level = 2;
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
@@ -77,6 +81,8 @@ dinosaur *dino;
             break;
         case 4:
             newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
+            newDino.scaleX = -1;
+            [newDino reverseHealthLabel];
             break;
         default:
             break;
@@ -84,8 +90,9 @@ dinosaur *dino;
     }
     [self addEnemyDinosaur:newDino];
     if(newDino.inAir){
-        newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+        newDino.position = ccp(enemyNest.position.x, (3.0/4)*screenHeight);
     }
+    [newDino changeLevelMultiplier:level];
 }
 
 -(void)spawnTRex{

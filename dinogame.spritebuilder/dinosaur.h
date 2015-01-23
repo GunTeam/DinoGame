@@ -25,10 +25,12 @@
 -(void) die;
 -(Boolean) isEnemyNest;
 -(void) reverseHealthLabel;
+-(void) changeLevelMultiplier: (double) newMultiplier;
+-(void) setHealthLabel;
 
-@property int health;
+@property float health;
 @property double speed;
-@property int attack;
+@property float attack;
 @property Boolean inAir;
 @property Boolean readyToAttack;
 @property Boolean isEnemy;
@@ -36,6 +38,6 @@
 @property int killBonus;
 @property int afterAttackDelay; //how many frames the dino waits in between attacks
 @property int price;
-@property float levelMultiplier;
+@property double levelMultiplier;
 
 @end

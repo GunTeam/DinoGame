@@ -35,5 +35,6 @@
 }
 
 @property int chanceOfEnemySpawn;
+@property float level;
 
 @end
