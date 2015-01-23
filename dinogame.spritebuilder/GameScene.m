@@ -73,10 +73,10 @@ dinosaur *dino;
             newDino = (Stegosaurus*)[CCBReader load:@"EvilStegosaurus"];
             break;
         case 3:
-            dinosaur *newDino = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
+            newDino = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
             break;
         case 4:
-            dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
+            newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
             break;
         default:
             break;
