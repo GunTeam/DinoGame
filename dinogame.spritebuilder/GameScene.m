@@ -48,9 +48,15 @@ dinosaur *dino;
     
     Stegosaurus *stego = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
     Triceratops *trice = (Triceratops*)[CCBReader load:@"Triceratops"];
+    Pterodactyl *ptero = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
+    TRex *trex = (TRex*)[CCBReader load:@"TRex"];
+    Allosaurus *allos = (Allosaurus*)[CCBReader load:@"Allosaurus"];
     
     _stegoPrice.string = [NSString stringWithFormat:@"%d", stego.price];
     _tricePrice.string = [NSString stringWithFormat:@"%d", trice.price];
+    _allosaurusPrice.string = [NSString stringWithFormat:@"%d", allos.price];
+    _pterodactylPrice.string = [NSString stringWithFormat:@"%d", ptero.price];
+    _trexPrice.string = [NSString stringWithFormat:@"%d", trex.price];
     
     [self addChild:ourNest];
     [self addChild:enemyNest];
