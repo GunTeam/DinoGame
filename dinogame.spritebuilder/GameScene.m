@@ -59,7 +59,29 @@ dinosaur *dino;
 
 
 -(void)spawnEnemyDino{
-    dinosaur *newDino = (dinosaur*)[CCBReader load:@"dinosaur"];
+    dinosaur *newDino;
+    int randSpawnFlag = arc4random()%5;
+    switch (randSpawnFlag)
+    {
+        case 0:
+            newDino = (Allosaurus*)[CCBReader load:@"EvilAllosaurus"];
+            break;
+        case 1:
+            newDino = (TRex*)[CCBReader load:@"EvilTRex"];
+            break;
+        case 2:
+            newDino = (Stegosaurus*)[CCBReader load:@"EvilStegosaurus"];
+            break;
+        case 3:
+            dinosaur *newDino = (Triceratops*)[CCBReader load:@"EvilTriceratops"];
+            break;
+        case 4:
+            dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
+            break;
+        default:
+            break;
+            
+    }
     [self addEnemyDinosaur:newDino];
 }
 
