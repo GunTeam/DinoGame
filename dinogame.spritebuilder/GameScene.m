@@ -34,7 +34,7 @@ dinosaur *dino;
     _physicsNode.debugDraw = true;
     
     
-    level = 2;
+    level = 1.2;
     strandsOfYarn = 2000; //start out currency at 200
     ourDinos = [[NSMutableArray alloc]init];
     enemyDinos = [[NSMutableArray alloc]init];
@@ -87,8 +87,8 @@ dinosaur *dino;
             break;
         case 4:
             newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
-//            newDino.scaleX = -1;
-//            [newDino reverseHealthLabel];
+            newDino.scaleX = -1;
+            [newDino reverseHealthLabel];
             break;
         default:
             break;

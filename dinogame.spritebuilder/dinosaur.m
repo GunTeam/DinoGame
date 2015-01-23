@@ -30,7 +30,7 @@
 }
 
 -(void) setHealthLabel{
-    _healthLabel.string = [NSString stringWithFormat:@"%f", self.health];
+    _healthLabel.string = [NSString stringWithFormat:@"%d", (int)(self.health+0.5)];
 }
 
 -(void) changeLevelMultiplier: (double) newMultiplier{
