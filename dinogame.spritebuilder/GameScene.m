@@ -94,7 +94,8 @@ dinosaur *dino;
             break;
             
     }
-    [self addEnemyDinosaur:newDino];
+//    [self addEnemyDinosaur:newDino];
+    newDino.scale = 0.8;
     if(newDino.inAir){
         newDino.position = ccp(enemyNest.position.x, (3.0/4)*screenHeight);
     }
@@ -103,34 +104,39 @@ dinosaur *dino;
 
 -(void)spawnTRex{
     TRex *newDino = (TRex*)[CCBReader load:@"TRex"];
+    newDino.scale = 0.8;
     [self addOurDinosaur:newDino];
-    newDino.scaleX = -1;
+    newDino.scaleX *= -1;
     [newDino reverseHealthLabel];
 }
 
 -(void)spawnTriceratops{
     dinosaur *newDino = (Triceratops*)[CCBReader load:@"Triceratops"];
+    newDino.scale = 0.8;
     [self addOurDinosaur:newDino];
-    newDino.scaleX = -1;
+    newDino.scaleX *= -1;
     [newDino reverseHealthLabel];
 }
 
 -(void)spawnStegosaurus{
     dinosaur *newDino = (Stegosaurus*)[CCBReader load:@"Stegosaurus"];
+    newDino.scale = 0.8;
     [self addOurDinosaur:newDino];
-    newDino.scaleX = -1;
+    newDino.scaleX *= -1;
     [newDino reverseHealthLabel];
 }
 
 -(void)spawnAllosaurus{
     dinosaur *newDino = (Allosaurus*)[CCBReader load:@"Allosaurus"];
+    newDino.scale = 0.8;
     [self addOurDinosaur:newDino];
-    newDino.scaleX = -1;
+    newDino.scaleX *= -1;
     [newDino reverseHealthLabel];
 }
 
 -(void)spawnPterodactyl{
     dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
+    newDino.scale = 0.8;
     [self addOurDinosaur:newDino];
 }
 
@@ -197,6 +203,15 @@ dinosaur *dino;
 
 - (void)update:(CCTime)delta
 {
+    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) {
+        //the enemy nest was destroyed!!
+        [self winLevel];
+    }
+    
+    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) {
+        //our nest was destroyed!!
+        [self loseLevel];
+    }
     [self sortOurDinos];
     [self sortEnemyDinos];
     //move our dinosaurs forward
@@ -209,6 +224,7 @@ dinosaur *dino;
                 if(enemyKilled){
                     strandsOfYarn += firstEnemy.killBonus;
                     [enemyDinos removeObject:firstEnemy];
+//                    [firstEnemy scheduleOnce:@selector(removeFromParent) delay:2];
                 }
             }
             else{
@@ -228,6 +244,7 @@ dinosaur *dino;
                 Boolean killed = [ourFirstDino attackedByDino:thisEnemy];
                 if(killed){
                     [ourDinos removeObject:ourFirstDino];
+//                    [ourFirstDino scheduleOnce:@selector(removeFromParent) delay:2];
                 }
             }
             else{
@@ -246,16 +263,6 @@ dinosaur *dino;
     float randSpawnFlag = arc4random()%1000;
     if(randSpawnFlag < self.chanceOfEnemySpawn){
         [self spawnEnemyDino];
-    }
-    
-    if ( [ self.children indexOfObject:enemyNest ] == NSNotFound ) {
-        //the enemy nest was destroyed!!
-        [self winLevel];
-    }
-    
-    if ( [ self.children indexOfObject:ourNest ] == NSNotFound ) {
-        //our nest was destroyed!!
-        [self loseLevel];
     }
 
 }
