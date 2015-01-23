@@ -87,8 +87,8 @@ dinosaur *dino;
             break;
         case 4:
             newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
-            newDino.scaleX = -1;
-            [newDino reverseHealthLabel];
+//            newDino.scaleX = -1;
+//            [newDino reverseHealthLabel];
             break;
         default:
             break;

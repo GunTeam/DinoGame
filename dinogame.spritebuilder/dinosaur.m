@@ -34,11 +34,13 @@
 }
 
 -(void) changeLevelMultiplier: (double) newMultiplier{
+    self.levelMultiplier = newMultiplier;
     self.health *= levelMultiplier;
     self.speed *= levelMultiplier;
     self.attack *= levelMultiplier;
     self.attackCounter *= levelMultiplier;
     self.killBonus *= levelMultiplier;
+    [self setHealthLabel];
 }
 
 -(void) moveDinoForward{
