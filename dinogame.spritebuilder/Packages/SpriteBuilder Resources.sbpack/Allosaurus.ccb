@@ -2405,8 +2405,8 @@
 											<integer>3</integer>
 											<key>value</key>
 											<array>
-												<real>27.202243804931641</real>
-												<real>29.342823028564453</real>
+												<real>31.491924285888672</real>
+												<real>31.782510757446289</real>
 											</array>
 										</dict>
 										<dict>
@@ -2465,7 +2465,7 @@
 											<key>type</key>
 											<integer>2</integer>
 											<key>value</key>
-											<real>0.0</real>
+											<real>-15.88844108581543</real>
 										</dict>
 										<dict>
 											<key>easing</key>
@@ -2524,8 +2524,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>27.026966094970703</real>
-									<real>29.045709609985352</real>
+									<real>29.395692825317383</real>
+									<real>30.484004974365234</real>
 									<integer>0</integer>
 									<integer>0</integer>
 									<integer>0</integer>
@@ -2563,7 +2563,7 @@
 								<key>type</key>
 								<string>Degrees</string>
 								<key>value</key>
-								<real>6.4133334159851074</real>
+								<real>-5.0205011367797852</real>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -2850,8 +2850,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>145.13333129882812</real>
-							<real>25.533332824707031</real>
+							<real>145.53334045410156</real>
+							<real>21.133331298828125</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2889,7 +2889,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>1.0435962677001953</real>
+						<real>4.1743850708007812</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3515,7 +3515,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>11.73590087890625</real>
+						<real>46.943618774414062</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -4375,7 +4375,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.83333331346511841</real>
+			<real>0.0</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
@@ -4519,7 +4519,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.93333333730697632</real>
+			<real>0.73333334922790527</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
