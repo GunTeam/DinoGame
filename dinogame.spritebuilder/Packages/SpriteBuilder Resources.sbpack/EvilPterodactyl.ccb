@@ -608,8 +608,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>68</real>
-							<real>-14</real>
+							<real>72.199996948242188</real>
+							<real>-16.799999237060547</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1263,8 +1263,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>156</real>
-							<real>-13</real>
+							<real>153.19999694824219</real>
+							<real>-1.7999992370605469</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1920,7 +1920,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>0.0</real>
+						<real>-9.3333339691162109</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2075,8 +2075,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>106</real>
-										<real>85</real>
+										<real>105</real>
+										<real>87</real>
 									</array>
 								</dict>
 							</array>
@@ -2344,8 +2344,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>105</real>
-							<real>87</real>
+							<real>89.133331298828125</real>
+							<real>81.866668701171875</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2422,6 +2422,17 @@
 					</dict>
 					<dict>
 						<key>name</key>
+						<string>flip</string>
+						<key>type</key>
+						<string>Flip</string>
+						<key>value</key>
+						<array>
+							<true/>
+							<false/>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
 						<string>effects</string>
 						<key>type</key>
 						<string>EffectControl</string>
@@ -2429,6 +2440,8 @@
 						<array/>
 					</dict>
 				</array>
+				<key>seqExpanded</key>
+				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -2709,8 +2722,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>59</real>
-							<real>164</real>
+							<real>43.133331298828125</real>
+							<real>155.13333129882812</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3072,8 +3085,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>173</real>
-							<real>169</real>
+							<real>153.39999389648438</real>
+							<real>176.93333435058594</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3322,7 +3335,7 @@
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>1.7666666507720947</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>
