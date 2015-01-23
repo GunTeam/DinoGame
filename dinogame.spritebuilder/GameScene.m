@@ -87,14 +87,14 @@ dinosaur *dino;
             break;
         case 4:
             newDino = (Pterodactyl*)[CCBReader load:@"EvilPterodactyl"];
-            newDino.scaleX = -1;
-            [newDino reverseHealthLabel];
+//            newDino.scaleX = -1;
+//            [newDino reverseHealthLabel];
             break;
         default:
             break;
             
     }
-//    [self addEnemyDinosaur:newDino];
+    [self addEnemyDinosaur:newDino];
     newDino.scale = 0.8;
     if(newDino.inAir){
         newDino.position = ccp(enemyNest.position.x, (3.0/4)*screenHeight);
