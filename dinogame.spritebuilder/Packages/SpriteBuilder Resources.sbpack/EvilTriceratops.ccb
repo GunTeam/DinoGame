@@ -16,7 +16,7 @@
 	<key>currentResolution</key>
 	<integer>0</integer>
 	<key>currentSequenceId</key>
-	<integer>4</integer>
+	<integer>2</integer>
 	<key>docDimensionsType</key>
 	<integer>1</integer>
 	<key>fileType</key>
@@ -514,8 +514,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>32.133331298828125</real>
-							<real>4</real>
+							<real>22</real>
+							<real>7</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1057,7 +1057,7 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>87.533332824707031</real>
+							<real>79</real>
 							<real>6</real>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -1900,7 +1900,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>3.2255611419677734</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -2404,8 +2404,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>91.733329772949219</real>
-							<real>6.0666666030883789</real>
+							<real>88</real>
+							<real>5</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -2965,8 +2965,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>37.266666412353516</real>
-							<real>3.5333333015441895</real>
+							<real>33</real>
+							<real>3</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3508,7 +3508,7 @@
 						<key>type</key>
 						<string>Degrees</string>
 						<key>value</key>
-						<real>15.999999046325684</real>
+						<real>0.0</real>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -3747,7 +3747,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
@@ -3819,7 +3819,7 @@
 				<integer>12</integer>
 			</dict>
 			<key>chainedSequenceId</key>
-			<integer>-1</integer>
+			<integer>1</integer>
 			<key>length</key>
 			<real>1</real>
 			<key>name</key>
