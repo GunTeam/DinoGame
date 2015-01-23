@@ -12,6 +12,7 @@
 @implementation TRex
 
 -(void) didLoadFromCCB{
+    self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;

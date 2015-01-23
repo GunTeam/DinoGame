@@ -10,9 +10,10 @@
 
 @implementation dinosaur
 
-@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price;
+@synthesize health, speed, attack, inAir, killBonus, readyToAttack, attackCounter, afterAttackDelay, price, levelMultiplier;
 
 -(void) didLoadFromCCB{
+    self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
@@ -26,6 +27,13 @@
     self.attackCounter = 0;
     self.price = 200;
     self.killBonus = 10;
+}
+
+-(void) changeLevelMultiplier: (float) newMultiplier{
+    self.health *= levelMultiplier;
+    self.speed *= levelMultiplier;
+    self.attack *= levelMultiplier;
+    self.attackCounter *= levelMultiplier;
 }
 
 -(void) moveDinoForward{

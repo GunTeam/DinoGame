@@ -83,6 +83,9 @@ dinosaur *dino;
             
     }
     [self addEnemyDinosaur:newDino];
+    if(newDino.inAir){
+        newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+    }
 }
 
 -(void)spawnTRex{
@@ -116,7 +119,6 @@ dinosaur *dino;
 -(void)spawnPterodactyl{
     dinosaur *newDino = (Pterodactyl*)[CCBReader load:@"Pterodactyl"];
     [self addOurDinosaur:newDino];
-    newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
 }
 
 -(void)addOurDinosaur:(dinosaur *)newDino{
@@ -126,6 +128,9 @@ dinosaur *dino;
         [ourDinos insertObject:newDino atIndex:usCount-1];
         [self addChild: newDino];
         strandsOfYarn -= newDino.price;
+        if(newDino.inAir){
+            newDino.position = ccp(ourNest.position.x, (3.0/4)*screenHeight);
+        }
     }
 }
 

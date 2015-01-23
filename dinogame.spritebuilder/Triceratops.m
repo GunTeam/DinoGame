@@ -12,6 +12,7 @@
 @implementation Triceratops
 
 -(void) didLoadFromCCB{
+    self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 1000;
     self.health = MAX_HEALTH;

@@ -12,12 +12,12 @@
 @implementation Pterodactyl
 
 -(void) didLoadFromCCB{
+    self.levelMultiplier = 1;
     self.isEnemy = false;
     MAX_HEALTH = 100;
     self.health = MAX_HEALTH;
     KNOCKBACK_THRESHOLD = MAX_HEALTH/2; //point at which the dino gets knocked back
     _healthLabel.string = [NSString stringWithFormat:@"%d", self.health];
-
     self.attack = 10;
     self.speed = 0.01; //default
     self.inAir =true; //default
